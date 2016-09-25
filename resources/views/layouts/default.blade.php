@@ -1,19 +1,3 @@
-<!--
-______                            _              _                                     _
-| ___ \                          | |            | |                                   | |
-| |_/ /___ __      __ ___  _ __  | |__   _   _  | |      __ _  _ __  __ _ __   __ ___ | |
-|  __// _ \\ \ /\ / // _ \| '__| | '_ \ | | | | | |     / _` || '__|/ _` |\ \ / // _ \| |
-| |  | (_) |\ V  V /|  __/| |    | |_) || |_| | | |____| (_| || |  | (_| | \ V /|  __/| |
-\_|   \___/  \_/\_/  \___||_|    |_.__/  \__, | \_____/ \__,_||_|   \__,_|  \_/  \___||_|
-                                          __/ |
-                                         |___/
-  ========================================================
-                                           laravel-china.org
-
-  --------------------------------------------------------
-  Laravel: v5.1 LTS
--->
-
 <!DOCTYPE html>
 <html lang="zh">
 	<head>
@@ -29,10 +13,8 @@ ______                            _              _                              
 		<meta name="description" content="@section('description') Laravel China 是国内最大的 Laravel 和 PHP 中文社区，致力于推动 Laravel，PHP7、php-fig 等 PHP 新技术，新理念在中国的发展，是国内最靠谱的 PHP 论坛。 @show" />
         <meta name="_token" content="{{ csrf_token() }}">
 
-        <link rel="stylesheet" href="{{ cdn(elixir('assets/css/styles.css')) }}">
-
-        <link rel="shortcut icon" href="{{ cdn('favicon1.png') }}"/>
-
+        <!--<link rel="stylesheet" href="{{ elixir('assets/css/styles.css') }}">-->
+		<link rel="stylesheet" href="{{ elixir('assets/css/main.css') }}">
         <script>
             Config = {
                 'cdnDomain': '{{ get_cdn_domain() }}',
@@ -52,19 +34,26 @@ ______                            _              _                              
         </script>
 
 	    @yield('styles')
+	    
+	    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+	    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+	    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/uikit.min.js"></script>
+		<script src="http://cdn.bootcss.com/vue/2.0.0-rc.4/vue.min.js"></script>
+		
+	    @stack('addon')
 
 	</head>
 	<body id="body">
 
-		<div id="wrap">
 
 			@include('layouts.partials.nav')
 
-			<div class="container main-container">
+			<main class="tm-main uk-block uk-block-default uk-container uk-container-center">
 
 				@if(\Auth::check() && !\Auth::user()->verified && !Request::is('email-verification-required'))
-				<div class="alert alert-warning">
-		            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<div class="uk-alert uk-alert-warning">
 		            邮箱未激活，请前往 {{ \Auth::user()->email }} 查收激活邮件，激活后才能完整地使用社区功能，如发帖和回帖。未收到邮件？请前往 <a href="{{ route('email-verification-required') }}">重发邮件</a> 。
 		        </div>
 				@endif
@@ -73,11 +62,10 @@ ______                            _              _                              
 
 				@yield('content')
 
-			</div>
+			</main>
 
 @include('layouts.partials.footer')
 
-		</div>
 
 
 

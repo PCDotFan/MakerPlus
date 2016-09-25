@@ -1,4 +1,4 @@
-<div class="banner-container rbs row">
+<!--<div class="uk-panel uk-panel-box">
     @if(isset($banners['website_top']))
         @foreach($banners['website_top'] as $banner)
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
@@ -12,3 +12,4 @@
         @endforeach
     @endif
 </div>
+-->

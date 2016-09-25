@@ -1,10 +1,6 @@
-<div class="panel-footer operate">
+<div class="panel-footer uk-panel-teaser operate">
 
-    <div class="pull-left hidden-xs">
-        <div class="social-share-cs "></div>
-    </div>
-
-  <div class="pull-right actions">
+  <p class="uk-text-right uk-margin-bottom-remove actions">
 
     @if ($currentUser && $manage_topics )
         <a data-ajax="post" id="topic-recomend-button" href="javascript:void(0);" data-url="{{ route('topics.recommend', [$topic->id]) }}" class="admin popover-with-html {{ $topic->is_excellent == 'yes' ? 'active' : ''}}" data-content="推荐主题，加精的帖子会出现在首页">
@@ -29,46 +25,45 @@
     @endif
 
     @if ( $currentUser && ($manage_topics || $currentUser->id == $topic->user_id) )
-      <a id="topic-append-button" href="javascript:void(0);" class="admin  popover-with-html" data-toggle="modal" data-target="#exampleModal" data-content="帖子附言，添加附言后所有参与讨论的用户都能收到消息提醒，包括点赞和评论的用户">
-        <i class="fa fa-plus"></i>
+      <a id="topic-append-button" data-uk-modal="{target:'#append-modal'}" class="uk-button-primary uk-button">
+        <i class="fa fa-plus"></i> 帖子附言
       </a>
 
-      <a id="topic-edit-button" href="{{ route('topics.edit', [$topic->id]) }}" data-content="{{ lang('Edit') }}" class="admin  popover-with-html">
-        <i class="fa fa-pencil-square-o"></i>
+      <a id="topic-edit-button" href="{{ route('topics.edit', [$topic->id]) }}" data-content="{{ lang('Edit') }}" class="uk-button">
+        <i class="fa fa-pencil-square-o"></i> 编辑帖子 
       </a>
     @endif
 
-  </div>
-  <div class="clearfix"></div>
+  </p>
 </div>
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="" aria-labelledby="exampleModalLabel" >
-  <div class="modal-dialog">
+<div class="uk-modal" id="append-modal" tabindex="-1">
+  <div class="uk-modal-dialog">
     <div class="modal-content">
-
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">{{ lang('Append Content') }}</h4>
+      <button type="button" class="uk-modal-close uk-close"></button>
+      <div class="uk-modal-header">
+        <h4>{{ lang('Append Content') }}</h4>
       </div>
 
-     <form method="POST" action="{{route('topics.append', $topic->id)}}" accept-charset="UTF-8">
+     <form class="uk-form" method="POST" action="{{route('topics.append', $topic->id)}}" accept-charset="UTF-8">
          {!! csrf_field() !!}
         <div class="modal-body">
-
-          <div class="alert alert-warning">
+          <div class="uk-alert uk-alert-warning">
               {{ lang('append_notice') }}
           </div>
 
-          <div class="form-group">
-              <textarea class="form-control" style="min-height:20px" placeholder="{{ lang('Please using markdown.') }}" name="content" cols="50" rows="10"></textarea>
+          <div class="uk-form-row">
+              <textarea rows="20" placeholder="{{ lang('Please using markdown.') }}" class="uk-width-1-1" data-uk-htmleditor="{markdown:true}" name="body" cols="50" rows="10"></textarea>
           </div>
 
           </div>
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">{{ lang('Close') }}</button>
-            <button type="submit" class="btn btn-primary">{{ lang('Submit') }}</button>
+          <div class="uk-modal-footer">
+            <p class="uk-text-right">
+              <button type="button" class="uk-button" data-dismiss="modal">{{ lang('Close') }}</button>
+              <button type="submit" class="uk-button uk-button-primary">{{ lang('Submit') }}</button>
+            </p>
           </div>
 
       </form>

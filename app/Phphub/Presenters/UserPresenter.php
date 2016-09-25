@@ -13,12 +13,13 @@ class UserPresenter extends Presenter
      */
     public function gravatar($size = 100)
     {
+        /* 七牛
         if (config('app.url_static') && $this->avatar) {
             //Using Qiniu image processing service.
             $postfix = $size > 0 ? "?imageView2/1/w/{$size}/h/{$size}" : '';
             return cdn('uploads/avatars/'.$this->avatar) . $postfix;
         }
-
+        */
         $github_id = $this->github_id;
         $domainNumber = rand(0, 3);
 

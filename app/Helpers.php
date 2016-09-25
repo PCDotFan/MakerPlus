@@ -9,21 +9,17 @@ function insanity_check()
 
 function cdn($filepath)
 {
-    if (config('app.url_static')) {
-        return config('app.url_static') . $filepath;
-    } else {
-        return config('app.url') . $filepath;
-    }
+    config('app.url') . $filepath;
 }
 
 function get_cdn_domain()
 {
-    return config('app.url_static') ?: config('app.url');
+    return config('app.url');
 }
 
 function get_user_static_domain()
 {
-    return config('app.user_static') ?: config('app.url');
+    return config('app.url');
 }
 
 function lang($text, $parameters = [])
@@ -54,7 +50,7 @@ function admin_enum_style_output($value, $reverse = false)
 
 function navViewActive($anchor)
 {
-    return Route::currentRouteName() == $anchor ? 'active' : '';
+    return Route::currentRouteName() == $anchor ? 'uk-active' : '';
 }
 
 function model_link($title, $model, $id)

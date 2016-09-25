@@ -4,8 +4,6 @@ require('laravel-elixir-compress');
 
 var production = elixir.config.production;
 var basejs = [
-    'resources/assets/js/vendor/jquery.min.js',
-    'resources/assets/js/vendor/bootstrap.min.js',
     'resources/assets/js/vendor/moment.min.js',
     'resources/assets/js/vendor/zh-cn.min.js',
     'resources/assets/js/vendor/emojify.min.js',
@@ -22,7 +20,6 @@ var basejs = [
     'resources/assets/js/vendor/jquery.inline-attach.min.js',
     'resources/assets/js/vendor/snowfall.jquery.min.js',
     'resources/assets/js/vendor/upload-image.js',
-    'resources/assets/js/vendor/bootstrap-switch.js',
     'resources/assets/js/vendor/messenger.js',
     'node_modules/sweetalert/dist/sweetalert.min.js',
     'node_modules/social-share.js/dist/js/social-share.min.js',
@@ -30,10 +27,6 @@ var basejs = [
 
 elixir(function(mix) {
     mix
-        .copy([
-            'node_modules/bootstrap-sass/assets/fonts/bootstrap'
-        ], 'public/assets/fonts/bootstrap')
-
         .copy([
             'node_modules/font-awesome/fonts'
         ], 'public/assets/fonts/font-awesome')
@@ -50,6 +43,10 @@ elixir(function(mix) {
         .copy([
             'resources/assets/fonts/googlefont'
         ], 'public/build/assets/fonts/googlefont')
+
+        .less([
+            'pagekit/theme.less'
+        ], 'public/assets/css/main.css')
 
         .sass([
             'base.scss',
@@ -73,6 +70,7 @@ elixir(function(mix) {
         .version([
 
             'assets/css/styles.css',
+            'assets/css/main.css',
             'assets/js/scripts.js',
 
             // API Web View
