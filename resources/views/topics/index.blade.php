@@ -16,7 +16,7 @@
             <div class="panel-body uk-panel-teaser remove-padding-horizontal">
                 @include('topics.partials.topics')
             </div>
-            <div class="panel-footer uk-text-right remove-padding-horizontal pager-footer">
+            <div class="panel-footer remove-padding-horizontal pager-footer uk-panel-teaser">
                 <!-- Pager -->
                 {!! $topics->appends(Request::except('page', '_pjax'))->render() !!}
             </div>
