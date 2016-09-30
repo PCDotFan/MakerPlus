@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title')
-PHPHub 名人堂 @parent
+MakerPlus 名人堂 @parent
 @stop
 
 @section('content')
@@ -9,7 +9,7 @@ PHPHub 名人堂 @parent
 <div class="hall_of_fames">
 
     <div class="box text-center site-intro rm-link-color">
-        PHPHub 名人堂，用于推荐对 PHPHub 社区有突出贡献的用户。<a style="text-decoration: underline;" href="https://laravel-china.org/topics/2440">更多信息</a>
+        MakerPlus 名人堂，用于推荐对 MakerPlus 社区有突出贡献的用户。<a style="text-decoration: underline;" href="https://laravel-china.org/topics/2440">更多信息</a>
     </div>
 
     @foreach($users as $index => $user)
@@ -19,7 +19,7 @@ PHPHub 名人堂 @parent
             <div class="card {{ $index % 2 == 0 ? 'add-margin-right' : 'add-margin-left' }}">
 
                 @if ($currentUser && $currentUser->id == $user->id)
-                <a class="pull-right popover-with-html text-lg animated rubberBand edit-btn" href="{{ route('users.edit', $user->id) }}" data-content="{{ lang('Edit Profile') }}">
+                <a class="pull-right  text-lg animated rubberBand edit-btn" href="{{ route('users.edit', $user->id) }}" data-uk-tooltip title="{{ lang('Edit Profile') }}">
                     <i class="fa fa-cog"></i>
                 </a>
                 @endif
@@ -48,11 +48,11 @@ PHPHub 名人堂 @parent
                 <ul class="list-inline">
 
                   @if ($user->real_name)
-                    <li class="popover-with-html" data-content="{{ lang('Real Name') }}"><span class="org"><i class="fa fa-user"></i> {{{ $user->real_name }}}</span></li>
+                    <li class="" data-uk-tooltip title="{{ lang('Real Name') }}"><span class="org"><i class="fa fa-user"></i> {{{ $user->real_name }}}</span></li>
                   @endif
 
                   @if ($user->github_name)
-                  <li class="popover-with-html" data-content="{{ $user->github_name }}">
+                  <li class="" data-uk-tooltip title="{{ $user->github_name }}">
                     <a href="https://github.com/{{ $user->github_name }}" target="_blank">
                       <i class="fa fa-github-alt"></i>
                     </a>
@@ -60,28 +60,28 @@ PHPHub 名人堂 @parent
                   @endif
 
                   @if ($user->weibo_link)
-                  <li class="popover-with-html" data-content="{{ $user->weibo_name }}">
+                  <li class="" data-uk-tooltip title="{{ $user->weibo_name }}">
                     <a href="{{ $user->weibo_link }}" rel="nofollow" class="weibo" target="_blank"><i class="fa fa-weibo"></i>
                     </a>
                   </li>
                   @endif
 
                   @if ($user->twitter_account)
-                  <li class="popover-with-html" data-content="{{ $user->twitter_account }}">
+                  <li class="" data-uk-tooltip title="{{ $user->twitter_account }}">
                     <a href="https://twitter.com/{{ $user->twitter_account }}" rel="nofollow" class="twitter" target="_blank"><i class="fa fa-twitter"></i>
                     </a>
                 </li>
                   @endif
 
                   @if ($user->linkedin)
-                  <li class="popover-with-html" data-content="点击查看 LinkedIn 个人资料">
+                  <li class="" data-uk-tooltip title="点击查看 LinkedIn 个人资料">
                     <a href="{{ $user->linkedin }}" rel="nofollow" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i>
                     </a>
                 </li>
                   @endif
 
                   @if ($user->personal_website)
-                  <li class="popover-with-html" data-content="{{ $user->personal_website }}">
+                  <li class="" data-uk-tooltip title="{{ $user->personal_website }}">
                     <a href="http://{{ $user->personal_website }}" rel="nofollow" target="_blank" class="url">
                       <i class="fa fa-globe"></i>
                     </a>
@@ -89,11 +89,11 @@ PHPHub 名人堂 @parent
                   @endif
 
                 @if ($user->company)
-                  <li class="popover-with-html" data-content="{{ $user->company }}"><i class="fa fa-users"></i> </li>
+                  <li class="" data-uk-tooltip title="{{ $user->company }}"><i class="fa fa-users"></i> </li>
                 @endif
 
                 @if ($user->city)
-                  <li class="popover-with-html" data-content="{{ $user->city }}"><i class="fa fa-map-marker"></i> </li>
+                  <li class="" data-uk-tooltip title="{{ $user->city }}"><i class="fa fa-map-marker"></i> </li>
                 @endif
 
               </ul>

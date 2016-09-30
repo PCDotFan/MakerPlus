@@ -1,7 +1,7 @@
-<ul class="list-group">
+<ul class="uk-list">
 
   @foreach ($users as $index => $followUser)
-   <li class="list-group-item" >
+   <li>
 
       <a href="{{ route('users.show', [$followUser->id]) }}" title="{{{ $followUser->name }}}">
 

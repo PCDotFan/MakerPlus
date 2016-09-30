@@ -1,4 +1,4 @@
-<div id="reply_notice" class="box">
+<!--<div id="reply_notice" class="uk-alert uk-alert-large">
     <ul class="helpblock list">
       <li>{!! lang('publish_typography') !!}</li>
       <li>{!! lang('publish_markdown') !!}</li>
@@ -7,3 +7,4 @@
       <li>{!! lang('publish_draft') !!}</li>
     </ul>
 </div>
+-->

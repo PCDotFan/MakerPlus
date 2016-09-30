@@ -1,9 +1,7 @@
 
 (function($){
-
     var original_title = document.title;
     var nCount = 0;
-
     var PHPHub = {
         init: function(){
             var self = this;
@@ -68,7 +66,7 @@
             self.initLogin();
             self.initEditBtnAnimated();
         },
-
+        //
         /**
          * Open External Links In New Window
          */
@@ -190,12 +188,6 @@
          */
         initPopup: function(){
             // Popover with html
-            $('.popover-with-html').popover({
-				 html : true,
-				 trigger : 'hover',
-                 container: 'body',
-				 placement: 'auto top',
-			 });
         },
 
         /**
@@ -453,7 +445,7 @@
         },
 
         initToolTips: function() {
-          $('[data-toggle="tooltip"]').tooltip();
+          
         },
 
         initAjax: function() {
@@ -817,8 +809,6 @@
             $('.topic-author-box .panel-body').hover(function() {
                   $('.edit-btn').toggleClass('infinite');
             });
-
-            $(".bootstrap-switch").bootstrapSwitch();
         },
 
     };

@@ -12,14 +12,14 @@
         <div class="markdown-body" id="emojify">
 
 
-<h1 id="toc_0">关于 PHPHub</h1>
+<h1 id="toc_0">关于 MakerPlus</h1>
 
 <h2 id="toc_1">说明</h2>
 
 <p>Laravel China 积极向上的 Laravel 和 开发者社区</p>
 <p>我们致力于推动 Laravel, php-fig 等国外 PHP 新技术，新理念在中国的发展。</p>
 
-<p>论坛基于开源同名项目 PHPHub，PHPHub 项目 MIT Licence 开源，由 Laravel5.1 构建，<a href="https://github.com/summerblue/phphub5">源代码在此 at GitHub</a>。欢迎贡献代码，或者 <a href="https://github.com/summerblue/phphub5/issues">提交 Bug Report</a>。</p>
+<p>论坛基于开源同名项目 MakerPlus，MakerPlus 项目 MIT Licence 开源，由 Laravel5.1 构建，<a href="https://github.com/summerblue/phphub5">源代码在此 at GitHub</a>。欢迎贡献代码，或者 <a href="https://github.com/summerblue/phphub5/issues">提交 Bug Report</a>。</p>
 
 <h2 id="toc_2">关于新手问题</h2>
 
@@ -29,7 +29,7 @@
 
 <p>在学习上遇到问题的时候，请先 Google。</p>
 
-<p>如果觉得你的问题比较独占，请先仔细阅读 <a href="https://laravel-china.org/topics/535">提问的智慧</a>，然后在 <a href="https://laravel-china.org/categories/4">PHPHub 问答分类下</a> 发表你的问题，谢谢。 </p>
+<p>如果觉得你的问题比较独占，请先仔细阅读 <a href="https://laravel-china.org/topics/535">提问的智慧</a>，然后在 <a href="https://laravel-china.org/categories/4">MakerPlus 问答分类下</a> 发表你的问题，谢谢。 </p>
 
 <h2 id="toc_3">愿景 Vision</h2>
 

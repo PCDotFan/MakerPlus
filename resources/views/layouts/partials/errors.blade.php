@@ -1,6 +1,5 @@
 @if( $errors->any())
-    <div class="alert alert-dismissable alert-danger">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <div class="uk-alert uk-alert-danger uk-alert-large">
         <ul>
             @foreach($errors->all() as $error)
             <li>{{ $error }}</li>

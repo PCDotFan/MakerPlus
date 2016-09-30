@@ -16,7 +16,7 @@
           <form method="GET" action="{{route('login')}}" accept-charset="UTF-8">
 
             <fieldset>
-              <div class="alert alert-warning">
+              <div class="uk-alert uk-alert-warning">
                 {!! lang('You dont have permission to proceed.') !!}
               </div>
 

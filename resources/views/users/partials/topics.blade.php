@@ -1,7 +1,7 @@
-<ul class="list-group">
+<ul class="uk-list">
 
   @foreach ($topics as $index => $topic)
-   <li class="list-group-item" >
+   <li>
 
       <a href="{{ route('topics.show', [$topic->id]) }}" title="{{{ $topic->title }}}">
         {{{ str_limit($topic->title, '100') }}}

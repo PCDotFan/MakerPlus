@@ -5,24 +5,23 @@
 @stop
 
 @section('content')
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 floating-box">
-      <div class="panel panel-default">
+  <div class="uk-grid">
+    <div class="uk-width-3-4 uk-container-center">
+      <div class="uk-panel uk-panel-box">
         <div class="panel-heading">
-          <h3 class="panel-title">{{ lang('Login') }}</h3>
+          <h3 class="panel-title uk-text-center">{{ lang('Login') }}</h3>
         </div>
         <div class="panel-body">
 
           <form method="GET" action="{{route('login')}}" accept-charset="UTF-8">
 
-            <fieldset>
-              <div class="alert alert-warning">
+              <div class="uk-alert uk-alert-warning">
                   {!! lang('You need to login to proceed.') !!}
               </div>
-              <a class="btn btn-lg btn-primary btn-block" id="login-required-submit" href="{{ URL::route('auth.oauth', ['driver' => 'github']) }}"><i class="fa fa-github-alt"></i> {{lang('Login with GitHub')}}</a>
-              <a class="btn btn-lg btn-success btn-block" href="{{ URL::route('auth.oauth', ['driver' => 'wechat']) }}"><i class="fa fa-weixin" ></i> {{lang('Login with WeChat')}}</a>
-            </fieldset>
-
+              <p class="uk-text-center uk-margin-bottom-remove">
+              <a class="uk-button uk-button-primary" id="login-required-submit" href="{{ URL::route('auth.oauth', ['driver' => 'github']) }}"><i class="fa fa-github-alt"></i> {{lang('Login with GitHub')}}</a>
+              <a class="uk-button uk-button-success" href="{{ URL::route('auth.oauth', ['driver' => 'wechat']) }}"><i class="fa fa-weixin" ></i> {{lang('Login with WeChat')}}</a>
+              </p>
         </form>
 
         </div>

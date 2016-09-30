@@ -2,15 +2,15 @@
 
 @section('content')
 
-<div class="box text-center site-intro rm-link-color">
+<div class="uk-panel uk-panel-box">
   {!! lang('site_intro') !!}
 </div>
 
 @include('layouts.partials.topbanner')
 
-<div class="panel panel-default list-panel home-topic-list">
-  <div class="panel-heading">
-    <h3 class="panel-title text-center">
+<div class="uk-margin uk-panel uk-panel-box panel list-panel home-topic-list">
+  <div class="panel-heading uk-panel-teaser">
+    <h3 class="panel-title uk-text-center">
       {{ lang('Excellent Topics') }} &nbsp;
       <a href="{{ route('feed') }}" style="color: #E5974E; font-size: 14px;" target="_blank">
          <i class="fa fa-rss"></i>
@@ -19,11 +19,11 @@
 
   </div>
 
-  <div class="panel-body ">
+  <div class="panel-body uk-panel-teaser">
 	@include('pages.partials.topics')
   </div>
 
-  <div class="panel-footer text-right">
+  <div class="panel-footer uk-panel-teaser uk-text-right">
 
   	<a href="topics?filter=excellent" class="more-excellent-topic-link">
   		{{ lang('More Excellent Topics') }} <i class="fa fa-arrow-right" aria-hidden="true"></i>

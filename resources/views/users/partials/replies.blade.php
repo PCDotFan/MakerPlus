@@ -1,10 +1,10 @@
 
-<ul class="list-group">
+<ul class="uk-list">
   @foreach ($replies as $index => $reply)
-   <li class="list-group-item">
+   <li>
 
     @if (count($reply->topic))
-      <a href="{{ route('topics.show', [$reply->topic_id]) }}" title="{{{ $reply->topic->title }}}" class="remove-padding-left">
+      <a href="{{ route('topics.show', [$reply->topic_id]) }}" title="{{{ $reply->topic->title }}}" >
           {{{ $reply->topic->title }}}
       </a>
       <span class="meta">

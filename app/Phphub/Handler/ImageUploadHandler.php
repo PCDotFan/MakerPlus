@@ -14,7 +14,7 @@ class ImageUploadHandler
      * @var UploadedFile $file
      */
     protected $file;
-    protected $allowed_extensions = ["png", "jpg", "gif", 'jpeg'];
+    protected $allowed_extensions = ["png", "jpg", "gif"];
 
     /**
      * @param UploadedFile $file

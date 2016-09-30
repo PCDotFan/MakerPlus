@@ -2,6 +2,4 @@
 !.gitignore
 !images
 !images/**
-!fonts
-!fonts/**
 .DS_Store

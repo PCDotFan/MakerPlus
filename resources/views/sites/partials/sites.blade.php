@@ -9,7 +9,7 @@
     <div class="panel-body row">
         @foreach($filterd_sites as $site)
             <div class="col-md-2 site">
-              <a class="popover-with-html" target="_blank" href="{{ $site->present()->linkWithUTMSource() }}" data-content="{{ $site->description }}">
+              <a class="" target="_blank" href="{{ $site->present()->linkWithUTMSource() }}" data-uk-tooltip title="{{ $site->description }}">
                 <img class="favicon" src="{{ $site->present()->icon() }}">
                 {{ $site->title }}
               </a>

@@ -1,13 +1,13 @@
 
 
 @if ($currentUser && $currentUser->id == $topic->user->id)
-<a class="pull-right popover-with-html text-lg animated rubberBand edit-btn" href="{{ route('users.edit', $topic->user->id) }}" data-content="{{ lang('Edit Profile') }}">
+<a class="pull-right  text-lg animated rubberBand edit-btn" href="{{ route('users.edit', $topic->user->id) }}" data-uk-tooltip title="{{ lang('Edit Profile') }}">
     <i class="fa fa-cog"></i>
 </a>
 @endif
 
 <a href="{{ route('users.show', $topic->user->id) }}">
-  <img src="{{ $topic->user->present()->gravatar }}" style="width:80px; height:80px;margin:5px;" class="img-thumbnail avatar" />
+  <img src="{{ $topic->user->present()->gravatar }}" style="width:80px; height:80px;margin:5px;" class="radius-avatar" />
 </a>
 
 <div class="media-body padding-top-sm">
@@ -21,14 +21,14 @@
 </div>
 @endif
 
-<ul class="list-inline">
+<ul class="list-inline uk-list">
 
   @if ($topic->user->real_name)
-    <li class="popover-with-html" data-content="{{ lang('Real Name') }}"><span class="org"><i class="fa fa-user"></i> {{{ $topic->user->real_name }}}</span></li>
+    <li class="" data-uk-tooltip title="{{ lang('Real Name') }}"><span class="org"><i class="fa fa-user"></i> {{{ $topic->user->real_name }}}</span></li>
   @endif
 
   @if ($topic->user->present()->hasBadge())
-    <li class="popover-with-html" data-content="{{ lang('User Role') }}"><i class="fa fa-graduation-cap" aria-hidden="true"></i> {{{ $topic->user->present()->badgeName() }}}</li>
+    <li class="" data-uk-tooltip title="{{ lang('User Role') }}"><i class="fa fa-graduation-cap" aria-hidden="true"></i> {{{ $topic->user->present()->badgeName() }}}</li>
   @endif
 
   @if ($topic->user->github_name)
@@ -47,7 +47,7 @@
   @endif
 
     @if ($topic->user->wechat_qrcode)
-    <li class="popover-with-html" data-content="<img src='{{ $topic->user->wechat_qrcode }}' style='width:100%'>">
+    <li class="" data-uk-tooltip title="<img src='{{ $topic->user->wechat_qrcode }}' style='width:100%'>">
       <i class="fa fa-wechat"></i> WeChat
     </li>
     @endif
@@ -60,7 +60,7 @@
   @endif
 
   @if ($topic->user->linkedin)
-  <li class="popover-with-html" data-content="点击查看 LinkedIn 个人资料">
+  <li class="" data-uk-tooltip title="点击查看 LinkedIn 个人资料">
     <a href="{{ $topic->user->linkedin }}" rel="nofollow" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn
     </a>
   </li>
@@ -75,11 +75,11 @@
   @endif
 
 @if ($topic->user->company)
-  <li class="popover-with-html" data-content="{{ $topic->user->company }}"><i class="fa fa-users"></i> {{{ lang('Company') }}}</li>
+  <li class="" data-uk-tooltip title="{{ $topic->user->company }}"><i class="fa fa-users"></i> {{{ lang('Company') }}}</li>
 @endif
 
 @if ($topic->user->city)
-  <li class="popover-with-html" data-content="{{ $topic->user->city }}"><i class="fa fa-map-marker"></i> {{{ lang('City') }}}</li>
+  <li class="" data-uk-tooltip title="{{ $topic->user->city }}"><i class="fa fa-map-marker"></i> {{{ lang('City') }}}</li>
 @endif
 
 </ul>

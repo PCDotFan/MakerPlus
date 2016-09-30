@@ -2,9 +2,9 @@
 
 @if (count($topics))
 
-<ul class="list-group row topic-list">
+<ul class="uk-list uk-list-line discussion-list topic-list uk-grid">
     @foreach ($topics as $topic)
-        <li class="list-group-item media col-md-6" style="margin-top: 0px;">
+        <li class="uk-width-1-2 uk-article">
 
              <a class="reply_last_time hidden-xs meta" href="{{route('topics.show', [$topic->id])}}">
                  {{ $topic->vote_count }} {{ lang('Up Votes') }}
@@ -12,28 +12,22 @@
                  {{ $topic->reply_count }} {{ lang('Replies') }}
               </a>
 
-            <div class="avatar pull-left">
+              <section class="discussion-avatar uk-float-left">
                 <a href="{{ route('users.show', [$topic->user_id]) }}">
-                    <img class="media-object img-thumbnail avatar avatar-middle" alt="{{{ $topic->user->name }}}" src="{{ $topic->user->present()->gravatar }}"/>
+                    <img class="uk-border-circle uk-margin-right" width="44" height="44" alt="{{{ $topic->user->name }}}" src="{{ $topic->user->present()->gravatar }}"/>
                 </a>
-            </div>
+            </section>
 
-            <div class="infos">
-
-              <div class="media-heading">
-
-                @if ($topic->order > 0 && !Input::get('filter') && Route::currentRouteName() != 'home' )
-                    <span class="hidden-xs label label-warning">{{ lang('Stick') }}</span>
+            @if ($topic->order > 0 && !Input::get('filter') && Route::currentRouteName() != 'home' )
+                    <span class="uk-badge-label uk-badge-warning">{{ lang('Stick') }}</span>
                 @else
-                    <span class="hidden-xs label label-{{ ($topic->is_excellent == 'yes' && Route::currentRouteName() != 'home') ? 'success' : 'default' }}">{{{ $topic->category->name }}}</span>
+                    <span class="uk-badge-label uk-badge-{{ ($topic->is_excellent == 'yes' && Route::currentRouteName() != 'home') ? 'success' : 'default' }}">{{{ $topic->category->name }}}</span>
                 @endif
-
-                <a href="{{ route('topics.show', [$topic->id]) }}" title="{{{ $topic->title }}}">
+                <section class="discussion-main">
+                <h2 class="uk-article-title discussion-title"><a href="{{ route('topics.show', [$topic->id]) }}" title="{{{ $topic->title }}}">
                     {{{ $topic->title }}}
-                </a>
-              </div>
-
-            </div>
+                </a></h2>
+                </section>
 
         </li>
     @endforeach
