@@ -11451,16 +11451,18 @@ body {
 .uk-form-horizontal .uk-form-controls {
   margin-top: 7px;
 }
-.pagination {
-  /* 1 */
-  padding: 0;
-  list-style: none;
-  /* 2 */
+.uk-badge-label {
+  background: #e5e5e5;
+  color: #999;
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
   text-align: center;
-  /* 3 */
-  font-size: 0.001px;
-  margin-bottom: 0;
-  text-align: right;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
 }
 /* Brand
  ========================================================================== */
@@ -11640,6 +11642,9 @@ body {
   margin-top: -5px;
   margin-left: 5px;
 }
+span.timeago {
+  color: #aaa;
+}
 .home-topic-list h3 {
   font-size: 14px;
   padding: 8px 15px;
@@ -11793,7 +11798,7 @@ body {
 .uk-comment-list {
   font-size: 14px;
 }
-.uk-comment-list li {
+.uk-comment-list > li {
   padding: 0px 15px;
   border: none;
   margin-bottom: 0px;
@@ -12029,6 +12034,7 @@ img.radius-avatar {
 .topic-author-box .list-inline {
   margin-bottom: 10px;
   min-height: 50px;
+  padding: 0;
 }
 .topic-author-box .list-inline li {
   padding-left: 5px;
@@ -12040,8 +12046,8 @@ img.radius-avatar {
   font-size: 0.9em;
   color: #606060;
   margin-top: 8px;
+  display: inline-block;
   list-style: none;
-  float: left;
 }
 .topic-author-box .list-inline li:hover {
   background-color: #489be0;
@@ -12066,6 +12072,35 @@ img.radius-avatar {
 .topic-author-box .edit-btn {
   padding-right: 2px;
 }
+.user-basic-info .role-label {
+  margin-top: 6px;
+  text-align: center;
+}
+.user-basic-info .role-label .label {
+  position: inherit;
+}
+.user-basic-info .item {
+  margin: 6px 0;
+}
+.user-basic-info .follow-info a {
+  display: block;
+  text-decoration: none;
+}
+.user-basic-info .follow-info a.counter {
+  font-size: 25px;
+  color: #4091D2;
+}
+.user-basic-info .follow-info a.counter:hover {
+  color: #4587BE;
+}
+.user-basic-info .follow-info a.text {
+  color: #999;
+  line-height: 30px;
+}
+.user-basic-meta h3 {
+  font-size: 24px;
+  margin: 10px 0px;
+}
 .users-label .users-label-item {
   border: 1px solid rgba(52, 52, 53, 0.23);
   display: inline-block;
@@ -12086,13 +12121,31 @@ a.users-label-item img {
   margin-bottom: -15px;
 }
 .ribbon .ribbon-excellent {
-  color: #da974d;
-  font-size: 14px;
   background: #fffce9;
   border-top: 1px solid #f0e0cf;
   border-bottom: 1px solid #f0e0cf;
-  margin: 0px -25px 10px;
+  margin: 0px -22px 10px -22px;
   padding: 4px 30px;
+  color: #da974d;
+  font-size: 14px;
+}
+.ribbon .ribbon-wiki {
+  background: #d9edf7;
+  border-top: 1px solid #DBF5FA;
+  border-bottom: 1px solid #DBF5FA;
+  margin: 0px -22px 10px -22px;
+  padding: 4px 30px;
+  color: #31708f;
+  font-size: 14px;
+}
+.ribbon .ribbon-anchored {
+  background: #fff2f2;
+  border-top: 1px solid #ffdba5;
+  border-bottom: 1px solid #ffdba5;
+  margin: 0px -22px 10px -22px;
+  padding: 4px 30px;
+  color: #ff3d00;
+  font-size: 14px;
 }
 .users-label {
   text-align: center;
@@ -12160,7 +12213,7 @@ div#reply_notice,
 div#preview-box {
   padding: 10px;
   margin: 0 0 20px 0;
-  box-shadow: 0 .2em 0 0 #ddd,0 0 0 1px #ddd;
+  box-shadow: 0 .2em 0 0 #ddd, 0 0 0 1px #ddd;
   background: #fff;
   border: 1px solid #e2e2e2;
   box-shadow: none;
@@ -12707,7 +12760,7 @@ div#preview-box {
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 #bbb;
 }
-.markdown-body :checked + .radio-label {
+.markdown-body:checked + .radio-label {
   position: relative;
   z-index: 1;
   border-color: #4078c0;

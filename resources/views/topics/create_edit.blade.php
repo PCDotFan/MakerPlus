@@ -36,18 +36,14 @@
             <form method="POST" action="{{ route('topics.store') }}" accept-charset="UTF-8" class="uk-form" id="topic-create-form">
                 @endif {!! csrf_field() !!}
                 <div class="uk-form-row">
-                    <div class="uk-form-controls">
-                        <select class="selectpicker form-control" name="category_id" id="category-select">
+                    <div class="uk-form-controls uk-grid uk-margin-remove">
+                        <select class="selectpicker form-control uk-width-2-10 uk-form-large" name="category_id" id="category-select">
                             <option value="" disabled {{ count($category) !=0 ?: 'selected' }}>{{ lang('Pick a category') }}</option>
                             @foreach ($categories as $value) @if($value->id != 3 || Auth::user()->can('compose_announcement'))
                             <option value="{{ $value->id }}" {{ (count($category) !=0 && $value->id == $category->id) ? 'selected' : '' }} >{{ $value->name }}</option>
                             @endif @endforeach
                         </select>
-                    </div>
-                </div>
-                <div class="uk-form-row">
-                    <div class="uk-form-controls">
-                        <input id="topic-title" class="uk-width-1-1 uk-form-large" placeholder="{{ lang('Please write down a topic') }}" name="title" type="text" value="{{ !isset($topic) ? '' : $topic->title }}">
+                        <input id="topic-title" class="uk-width-8-10 uk-form-large" placeholder="{{ lang('Please write down a topic') }}" name="title" type="text" value="{{ !isset($topic) ? '' : $topic->title }}">
                     </div>
                 </div>
                 @foreach ($categories as $cat)
@@ -68,13 +64,6 @@
             </form>
     </div>
     <div class="pk-width-sidebar">
-        <div class="uk-panel uk-form">
-            <div class="uk-form-row">
-                <label for="form-status" class="uk-form-label">分类目录</label>
-                <div class="uk-form-controls">
-                </div>
-            </div>
-        </div>
         <div class="uk-panel uk-panel-box">
             <div class="panel-heading uk-text-center">
                 <h3 class="panel-title">请注意以下几点</h3>

@@ -13,22 +13,23 @@
     <link rel="stylesheet" href="/build/assets/css/main.css">
     <link href="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
     <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
     <script>
-            Config = {
-                'cdnDomain': '{{ get_cdn_domain() }}',
-                'user_id': {{ $currentUser ? $currentUser->id : 0 }},
-                'user_avatar': {!! $currentUser ? '"'.$currentUser->present()->gravatar() . '"' : '""' !!},
-                'user_link': {!! $currentUser ? '"'. route('users.show', $currentUser->id) . '"' : '""' !!},
-                'routes': {
-                    'notificationsCount' : '{{ route('notifications.count') }}',
-                    'upload_image' : '{{ route('upload_image') }}'
-                },
-                'token': '{{ csrf_token() }}',
-                'environment': '{{ app()->environment() }}',
-                'following_users': []
-            };
-            var ShowCrxHint = '{{isset($show_crx_hint) ? $show_crx_hint : 'no'}}';
-        </script>
+        Config = {
+            'cdnDomain': '{{ get_cdn_domain() }}',
+            'user_id': {{ $currentUser ? $currentUser->id : 0 }},
+            'user_avatar': {!! $currentUser ? '"'.$currentUser->present()->gravatar() . '"' : '""' !!},
+            'user_link': {!! $currentUser ? '"'. route('users.show', $currentUser->id) . '"' : '""' !!},
+            'routes': {
+                'notificationsCount' : '{{ route('notifications.count') }}',
+                'upload_image' : '{{ route('upload_image') }}'
+            },
+            'token': '{{ csrf_token() }}',
+            'environment': '{{ app()->environment() }}',
+            'following_users': []
+        };
+        var ShowCrxHint = '{{isset($show_crx_hint) ? $show_crx_hint : 'no'}}';
+    </script>
     @yield('styles')
     <style type="text/css">.hide { display: none!important; visibility: hidden!important; }</style>
 </head>

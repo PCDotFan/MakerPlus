@@ -2,12 +2,12 @@
     <div class="uk-panel uk-panel-box">
         <div class="padding-sm user-basic-info">
             <div style="">
-                <div class="media">
-                    <div class="media-left">
+                <div class="user-basic-meta uk-grid uk-grid-small">
+                    <div class="uk-width-1-2">
                         <div class="image">
                             @if ($currentUser && $currentUser->id == $user->id)
                             <a href="{{ route('users.edit_avatar', $user->id) }}" class="" data-uk-tooltip title="修改头像">
-                      <img class="media-object avatar-112 avatar img-thumbnail" src="{{ $user->present()->gravatar(200) }}">
+                      <img class="media-object radius-avatar img-thumbnail" src="{{ $user->present()->gravatar(200) }}">
                   </a> @else
                             <img class="media-object avatar-112 avatar img-thumbnail" src="{{ $user->present()->gravatar(200) }}"> @endif
                         </div>
@@ -17,10 +17,10 @@
                         </div>
                         @endif
                     </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">
-                    {{ $user->name }}
-                </h3>
+                    <div class="uk-width-1-2">
+                        <h3 class="uk-text-left">
+                            {{ $user->name }}
+                        </h3>
                         <div class="item">
                             {{ $user->real_name }}
                         </div>
@@ -39,22 +39,22 @@
                 </div>
             </div>
             <hr>
-            <div class="follow-info uk-grid">
-                <div class="uk-width-1-3">
+            <div class="follow-info uk-grid uk-grid-small">
+                <div class="uk-width-1-3 uk-text-center">
                     <a class="counter" href="{{ route('users.followers', $user->id) }}">{{ $user->follower_count }}</a>
                     <a class="text" href="{{ route('users.followers', $user->id) }}">关注者</a>
                 </div>
-                <div class="uk-width-1-3">
+                <div class="uk-width-1-3 uk-text-center">
                     <a class="counter" href="{{ route('users.replies', $user->id) }}">{{ $user->reply_count }}</a>
                     <a class="text" href="{{ route('users.replies', $user->id) }}">评论</a>
                 </div>
-                <div class="uk-width-1-3">
+                <div class="uk-width-1-3 uk-text-center">
                     <a class="counter" href="{{ route('users.topics', $user->id) }}">{{ $user->topic_count }}</a>
                     <a class="text" href="{{ route('users.topics', $user->id) }}">话题</a>
                 </div>
             </div>
             <hr>
-            <div class="topic-author-box text-center">
+            <div class="topic-author-box uk-text-center">
                 <ul class="list-inline">
                     @if ($user->github_name)
                     <li class="" data-uk-tooltip title="{{ $user->github_name }}">

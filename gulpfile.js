@@ -67,16 +67,6 @@ elixir(function(mix) {
             'api/api.js'
         ], 'public/assets/js/api.js')
 
-        .version([
-            'assets/css/main.css',
-            'assets/js/scripts.js',
-            'build/assets/css/main.css',
-            'build/assets/js/scripts.js',
-            // API Web View
-            'assets/css/api.css',
-            'assets/js/api.js',
-        ])
-
         .livereload();
 
     //if (production) {

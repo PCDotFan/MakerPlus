@@ -1,6 +1,6 @@
 <header id="header" class="tm-header">
     <nav class="uk-navbar">
-        <a class="uk-navbar-brand" href="#">MakerPlus+</a>
+        <a class="uk-navbar-brand" href="/">MakerPlus+</a>
         <ul class="uk-navbar-nav">
             <li class="{{ (Request::is('topics*') && !Request::is('categories*') ? ' uk-active' : '') }}"><a href="{{ route('topics.index') }}">{{ lang('Topics') }}</a></li>
             <li class="{{ Request::is('categories/6') ? ' uk-active' : '' }}"><a href="{{ route('categories.show', [6, 'filter' => 'recent']) }}">教程</a></li>

@@ -3,7 +3,7 @@
     @include('users.partials.basicinfo')
     <div class="pk-width-content">
         @if ($user->introduction)
-        <div class="box text-center">{{{ $user->introduction }}}</div>
+        <div class="uk-panel uk-panel-box uk-text-center">{{{ $user->introduction }}}</div>
         @endif @if ($user->is_banned == 'yes')
         <div class="text-center uk-alert uk-alert-danger"><b>{{ lang('This user is banned!') }}</b></div>
         @endif
