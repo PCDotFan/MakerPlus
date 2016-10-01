@@ -4,7 +4,6 @@
         <div class="uk-panel uk-panel-box">
             <div class="panel-heading uk-panel-teaser">
                 <ul class="uk-tab" data-uk-tab="">
-                    <li class="uk-active"><a href="#">Active</a></li>
                     <li><a href="/topics?filter=default" class="active">活跃</a></li>
                     <li><a href="/topics?filter=excellent">精华</a></li>
                     <li><a href="/topics?filter=recent">最近</a></li>
