@@ -328,7 +328,7 @@
                 .click(function() {
                     var that = $(this);
                     if ($(this).attr('data-method') == 'post') {
-                        $(this).find("form").submit();
+                    $(this).find("form").submit();
                     }
                     if ($(this).attr('data-method') == 'delete') {
                         swal({

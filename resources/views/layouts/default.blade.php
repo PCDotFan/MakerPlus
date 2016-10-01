@@ -9,6 +9,7 @@
     <meta name="author" content="MakerPlus" />
     <meta name="description" content="@section('description') Laravel China 是国内最大的 Laravel 和 PHP 中文社区，致力于推动 Laravel，PHP7、php-fig 等 PHP 新技术，新理念在中国的发展，是国内最靠谱的 PHP 论坛。 @show" />
     <meta name="_token" content="{{ csrf_token() }}">
+    <!--<link rel="stylesheet" href="{{ elixir('assets/css/main.css') }}">-->
     <link rel="stylesheet" href="/build/assets/css/main.css">
     <link href="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
     <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -29,6 +30,7 @@
             var ShowCrxHint = '{{isset($show_crx_hint) ? $show_crx_hint : 'no'}}';
         </script>
     @yield('styles')
+    <style type="text/css">.hide { display: none!important; visibility: hidden!important; }</style>
 </head>
 
 <body id="body">

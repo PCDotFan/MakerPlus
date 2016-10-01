@@ -1,5 +1,5 @@
 /*!
- * jQuery.textcomplete.js
+ * jQuery.textcomplete-modified.js
  *
  * Repositiory: https://github.com/yuku-t/jquery-textcomplete
  * License:     MIT
@@ -117,7 +117,7 @@
     var html, css, $baseList, _id;
 
     html = {
-      list: '<ul class="dropdown-menu"></ul>'
+      list: '<ul class="uk-dropdown uk-nav uk-nav-dropdown autocomplete-emoji"></ul>'
     };
     css = {
       // Removed the 'top' property to support the placement: 'top' option

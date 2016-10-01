@@ -2,12 +2,15 @@
 <div class="users-show uk-grid pk-grid-large" data-uk-grid-margin="">
     @include('users.partials.setting_nav')
     <div class="main-col pk-width-content">
+        <div class="uk-panel uk-panel-box">
             <div class="uk-margin uk-flex uk-flex-space-between uk-flex-wrap" data-uk-margin="">
                 <div data-uk-margin="">
                     <h2 class="uk-margin-remove">{{ lang('Edit Profile') }}</h2>
                 </div>
                 <div data-uk-margin="">
-                    <a href="javascript:document.getElementById('profile-form').submit();"><button class="uk-button uk-button-primary" type="submit">保存</button></a>
+                    <a href="javascript:document.getElementById('profile-form').submit();">
+                        <button class="uk-button uk-button-primary" type="submit">保存</button>
+                    </a>
                 </div>
             </div>
             <hr> @include('layouts.partials.errors')
@@ -131,6 +134,7 @@
                         </div>
                     </div>
             </form>
+            </div>
         </div>
     </div>
     @stop

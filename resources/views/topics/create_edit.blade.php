@@ -65,7 +65,6 @@
                         <input class="btn btn-primary" id="topic-create-submit" type="submit" value="{{ lang('Publish') }}">
                     </div>
                 </div>
-                <div class="box preview markdown-body" id="preview-box" style="display:none;"></div>
             </form>
     </div>
     <div class="pk-width-sidebar">
@@ -74,6 +73,32 @@
                 <label for="form-status" class="uk-form-label">分类目录</label>
                 <div class="uk-form-controls">
                 </div>
+            </div>
+        </div>
+        <div class="uk-panel uk-panel-box">
+            <div class="panel-heading uk-text-center">
+                <h3 class="panel-title">请注意以下几点</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="uk-list">
+                    <li>请传播美好的事物，拒绝低俗、诋毁、谩骂等相关信息</li>
+                    <li>请尽量分享技术相关的话题，谢绝发布社会, 政治等相关新闻</li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-panel uk-panel-box">
+            <div class="panel-heading uk-text-center">
+                <h3 class="panel-title">在高质量优秀社区的我们</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="uk-list">
+                    <li>分享生活见闻, 分享知识；</li>
+                    <li>接触新技术, 讨论技术解决方案；</li>
+                    <li>寻找伙伴, 遇见志同道合的人；</li>
+                    <li>自发线下交流；</li>
+                    <li>甚至一起开始下一个神奇的项目</li>
+                </ul>
+                 
             </div>
         </div>
     </div>

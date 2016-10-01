@@ -1,5 +1,5 @@
 <div class="pk-width-sidebar uk-row-first">
-    <div class="uk-panel">
+    <div class="uk-panel uk-panel-box">
         <ul class="uk-nav uk-nav-side pk-nav-large">
             <li class="{{ navViewActive('users.edit') }}">
                 <a href="{{ route('users.edit', $user->id) }}" class="">

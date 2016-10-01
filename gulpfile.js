@@ -23,8 +23,6 @@ var basejs = [
     'resources/assets/js/vendor/messenger.js',
     // UIKit
     'bower_components/uikit/js/uikit.min.js',
-    'bower_components/uikit/js/components/htmleditor.min.js',
-    'bower_components/uikit/js/components/autocomplete.min.js',
     'bower_components/uikit/js/components/notify.min.js',
     'bower_components/uikit/js/components/tooltip.min.js',
     'bower_components/uikit/js/components/sticky.min.js',
@@ -70,9 +68,10 @@ elixir(function(mix) {
         ], 'public/assets/js/api.js')
 
         .version([
-            'assets/css/styles.css',
             'assets/css/main.css',
             'assets/js/scripts.js',
+            'build/assets/css/main.css',
+            'build/assets/js/scripts.js',
             // API Web View
             'assets/css/api.css',
             'assets/js/api.js',

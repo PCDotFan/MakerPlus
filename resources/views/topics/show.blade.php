@@ -1,10 +1,6 @@
 @extends('layouts.default') 
 @section('title') {{{ $topic->title }}}_@parent @stop 
 @section('description') {{{ $topic->excerpt }}} @stop 
-@push('addon')
-    <link href="http://cdn.bootcss.com/codemirror/5.18.2/codemirror.min.css" rel="stylesheet">
-    <link href="http://cdn.bootcss.com/codemirror/5.18.2/addon/hint/show-hint.css" rel="stylesheet"> 
-@endpush 
 @section('content')
 <div class="topics-show uk-grid pk-grid-large" data-uk-grid-margin="">
     <div class="pk-width-content uk-row-first">
@@ -36,7 +32,7 @@
             @include('topics.partials.topic_operate', ['manage_topics' => $currentUser ? $currentUser->can("manage_topics") : false])
         </div>
         <div class="votes-container uk-panel uk-panel-box uk-margin padding-md">
-            <div class="panel-body vote-box text-center">
+            <div class="panel-body vote-box uk-text-center">
                 <div class="uk-button-group">
                     <a data-ajax="post" href="javascript:void(0);" data-url="{{ route('topics.upvote', $topic->id) }}" data-uk-tooltip title="点赞相当于收藏，可以在个人页面的「赞过的话题」导航里查看" id="up-vote" class="vote uk-button-primary uk-button {{ $topic->user->payment_qrcode ?: 'btn-inverted' }}  {{ $currentUser && $topic->votes()->ByWhom(Auth::id())->WithType('upvote')->count() ? 'active' :'' }}">
                         <i class="fa fa-thumbs-up" aria-hidden="true"></i> 点赞
@@ -96,7 +92,7 @@
                     <input type="hidden" name="topic_id" value="{{ $topic->id }}" /> @include('topics.partials.composing_help_block')
                     <div class="uk-form-row">
                         @if ($currentUser) @if ($currentUser->verified)
-                        <textarea class="form-control" rows="5" placeholder="{{ lang('Please using markdown.') }}" style="overflow:hidden" id="reply_content" name="body" cols="50" data-uk-htmleditor="{mode:'tab'}"></textarea>
+                        <textarea class="form-control" rows="5" placeholder="{{ lang('Please using markdown.') }}" style="overflow:hidden" id="reply_content" name="body" cols="50"></textarea>
                         @else
                         <textarea class="form-control" disabled="disabled" rows="5" placeholder="{{ lang('You need to verify the email for commenting.') }}" name="body" cols="50"></textarea>
                         @endif @else
@@ -107,25 +103,19 @@
                         <button class="uk-button uk-button-primary" id="reply-create-submit" type="submit" {{ $currentUser ? '' : 'disabled'}}>{{ lang('Reply') }}</button>
                         <kbd class="help-inline" title="Or Command + Enter">Ctrl+Enter</kbd>
                     </div>
-                    <div class="box preview markdown-reply" id="preview-box" style="display:none;"></div>
                 </form>
             </div>
+            <div class="box preview markdown-reply uk-panel uk-panel-box uk-margin-top" id="preview-box" style="display:none;"></div>
         </div>
     </div>
     @if( $topic->user->payment_qrcode ) @include('topics.partials.payment_qrcode_modal') @endif @include('layouts.partials.sidebar')
 </div>
 @include('layouts.partials.bottombanner') @stop 
 @section('scripts')
-<script src="http://cdn.bootcss.com/codemirror/5.18.2/codemirror.min.js"></script>
-<script src="http://cdn.bootcss.com/codemirror/5.19.0/addon/mode/overlay.min.js"></script>
-<script src="http://cdn.bootcss.com/codemirror/5.19.0/mode/xml/xml.min.js"></script>
-<script src="http://cdn.bootcss.com/codemirror/5.19.0/mode/gfm/gfm.min.js"></script>
-<script src="http://cdn.bootcss.com/codemirror/5.19.0/mode/markdown/markdown.min.js"></script>
-<script src="http://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
     Config.following_users = @if($currentUser) {
-        !!$currentUser - > present() - > followingUsersJson() !!
+        !!$currentUser - > present() - > followingUsersJson()!!
     }
     @else[] @endif;
     PHPHub.initAutocompleteAtUser();
