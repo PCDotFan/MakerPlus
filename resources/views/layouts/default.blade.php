@@ -11,8 +11,8 @@
     <meta name="_token" content="{{ csrf_token() }}">
     <!--<link rel="stylesheet" href="{{ elixir('assets/css/main.css') }}">-->
     <link rel="stylesheet" href="/build/assets/css/main.css">
-    <link href="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
-    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
     <script>
         Config = {
@@ -45,8 +45,8 @@
     </main>
     @include('layouts.partials.footer')
     <script src="/assets/js/scripts.js"></script>
-    <script src="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
-    <script src="http://cdn.bootcss.com/vue/2.0.0-rc.4/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.0.0-rc.4/vue.min.js"></script>
     @stack('addon') @yield('scripts') @if (App::environment() == 'production') @endif
 </body>
 
