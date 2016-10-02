@@ -115,6 +115,10 @@
 <script type="text/javascript">
     $(document).ready(function()
     {
+        var $config = {
+            sites               : ['qzone', 'qq', 'weibo','wechat', 'douban'], // 启用的站点
+            disabled            : ['google', 'facebook', 'twitter'], // 禁用的站点
+        };
         Config.following_users =  @if($currentUser) {!!$currentUser->present()->followingUsersJson()!!} @else [] @endif;
         PHPHub.initAutocompleteAtUser();
         $('.social-share').share($config);

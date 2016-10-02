@@ -1,5 +1,5 @@
 <div class="panel-footer uk-panel-teaser operate">
-    <p class="social-share"></p>
+    <p class="social-share uk-margin-bottom-remove"></p>
     <p class="uk-text-right uk-margin-bottom-remove actions">
         @if ($currentUser && $manage_topics )
         <a data-ajax="post" id="topic-recomend-button" href="javascript:void(0);" data-url="{{ route('topics.recommend', [$topic->id]) }}" class="admin uk-button-success uk-button {{ $topic->is_excellent == 'yes' ? 'active' : ''}}" data-uk-tooltip title="推荐主题，加精的帖子会出现在首页">
