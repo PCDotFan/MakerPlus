@@ -42,6 +42,10 @@ elixir(function(mix) {
         ], 'resources/assets/less/uikit')
 
         .copy([
+            'bower_components/messenger/build/css'
+        ], 'resources/assets/extras/css/messenger')
+
+        .copy([
             'resources/assets/fonts/googlefont'
         ], 'public/build/assets/fonts/googlefont')
 

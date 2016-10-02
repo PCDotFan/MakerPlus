@@ -96,8 +96,8 @@
                     $(this).text(moment(time_str).fromNow());
                 }
 
-                $(this).addClass('popover-with-html');
-                $(this).attr('data-content', time_str);
+                $(this).attr('data-uk-tooltip');
+                $(this).attr('title', time_str);
             });
         },
 
@@ -628,7 +628,7 @@
                 if (method === 'delete') {
                     swal({
                         title: "",
-                        text: "Are you sure want to proceed?",
+                        text: "您确定要执行此操作吗？",
                         type: "warning",
                         showCancelButton: true,
                         cancelButtonText: "取消",
@@ -674,7 +674,7 @@
                         });
                     }
                 } else {
-                    that.addClass('active');
+                    that.addClass('uk-active');
                     that.addClass('animated rubberBand');
 
                     if (cancelText) {
