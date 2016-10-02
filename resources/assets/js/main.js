@@ -96,7 +96,7 @@
                     $(this).text(moment(time_str).fromNow());
                 }
 
-                $(this).attr('data-uk-tooltip');
+                $(this).attr('data-uk-tooltip', '');
                 $(this).attr('title', time_str);
             });
         },
@@ -143,7 +143,7 @@
         initAutocompleteAtUser: function() {
             var at_users = Config.following_users,
                   user;
-            $users = $('.media-heading').find('a.author');
+            $users = $('.comment-meta').find('h3.author');
             for (var i = 0; i < $users.length; i++) {
                 user = $users.eq(i).text().trim();
                 if ($.inArray(user, at_users) == -1) {
@@ -674,7 +674,7 @@
                         });
                     }
                 } else {
-                    that.addClass('uk-active');
+                    that.addClass('active');
                     that.addClass('animated rubberBand');
 
                     if (cancelText) {
@@ -780,7 +780,7 @@
         },
 
         showPluginDownload: function() {
-            this.showMsg('操作成功，安装 <a target="_blank" href="https://chrome.google.com/webstore/detail/fcopfkdgikhodlcjkjdppdfkbhmehdon">Chrome 插件</a> 接收提醒。', {
+            this.showMsg('操作成功。', {
                 type: 'success',
                 timer: 8000
             });

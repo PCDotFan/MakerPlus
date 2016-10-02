@@ -246,6 +246,8 @@ return [
         'Rss'              => Thujohn\Rss\RssFacade::class,
         'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
 
+        //'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+
         // API
         'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
     ],

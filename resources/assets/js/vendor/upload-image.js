@@ -54,7 +54,7 @@ $(document).ready(function (e) {
     {
       noPreview();
 
-      $('#message').html('<div class="alert alert-warning" role="alert">Unvalid image format. Allowed formats: JPG, JPEG, PNG.</div>');
+      $('#message').html('<div class="uk-alert uk-alert-warning" role="alert">Unvalid image format. Allowed formats: JPG, JPEG, PNG.</div>');
 
       return false;
     }
@@ -63,7 +63,7 @@ $(document).ready(function (e) {
     {
       noPreview();
 
-      $('#message').html('<div class=\"alert alert-danger\" role=\"alert\">The size of image you are attempting to upload is ' + (file.size/1024).toFixed(2) + ' KB, maximum size allowed is ' + (maxsize/1024).toFixed(2) + ' KB</div>');
+      $('#message').html('<div class=\"uk-alert uk-alert-danger\" role=\"alert\">The size of image you are attempting to upload is ' + (file.size/1024).toFixed(2) + ' KB, maximum size allowed is ' + (maxsize/1024).toFixed(2) + ' KB</div>');
 
       return false;
     }

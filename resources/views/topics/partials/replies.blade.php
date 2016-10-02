@@ -12,7 +12,7 @@
             <section class="comment-right">
                 <span class="comment-meta">
                     <a href="{{ route('users.show', [$reply->user_id]) }}" title="{{{ $reply->user->name }}}" class="uk-link">
-                    <h3 class="uk-comment-title">{{{ $reply->user->name }}}</h3>
+                    <h3 class="uk-comment-title author">{{{ $reply->user->name }}}</h3>
                 </a> 
                 @if ($reply->user->present()->isAdmin())
                     <span class="uk-badge-label uk-badge-success mod-label">Moderator</span> @endif @if($reply->user->introduction)
