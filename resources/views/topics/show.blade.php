@@ -117,6 +117,7 @@
     {
         Config.following_users =  @if($currentUser) {!!$currentUser->present()->followingUsersJson()!!} @else [] @endif;
         PHPHub.initAutocompleteAtUser();
+        $('.social-share').share($config);
     });
 </script>
 @stop
