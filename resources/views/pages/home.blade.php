@@ -5,11 +5,12 @@
 <div class="uk-panel uk-panel-box">
   <div class="uk-grid uk-grid-medium" style="width: 480px; margin:0px auto; text-align: left;">
     <div class="uk-width-2-5">
+      <img src="https://twemoji.b0.upaiyun.com/2/svg/1f381.svg" style="width: 55px;">
     </div>
     <div class="uk-width-3-5">
-      <div class="media-body" style="line-height: 200%; text-align: center;">
+      <div style="line-height: 200%; text-align: center;">
         <div style="font-size: 15px">
-        MakerPlus - 代码已开源至 <a href="https://github.com/pcdotfan/MakerPlus" target="_blank">Github.</a>
+        MakerPlus - 代码已开源至 <a href="https://github.com/pcdotfan/MakerPlus" target="_blank">GitHub.</a>
         </div>
         <div>
           <code style="padding: 4px 10px;">git@github.com:PCDotFan/makerPlus.git</code>
