@@ -1,17 +1,10 @@
-@extends('layouts.default') @section('title') {{ isset($topic) ? '编辑话题' : lang('Create New Topic') }}_@parent @stop @push('addon')
-<link href="http://cdn.bootcss.com/codemirror/5.18.2/codemirror.min.css" rel="stylesheet">
-<link href="http://cdn.bootcss.com/codemirror/5.18.2/addon/hint/show-hint.css" rel="stylesheet">
-<script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/autocomplete.min.js?v=c692"></script>
-<script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/notify.min.js?v=c692"></script>
-<script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/tooltip.min.js?v=c692"></script>
-<script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/sticky.min.js?v=c692"></script>
-<script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/sortable.min.js?v=c692"></script>
-<script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/pagination.min.js?v=c692"></script>
-<script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/form-select.min.js?v=c692"></script>
-<script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/htmleditor.min.js"></script>
-<script src="http://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
-<script src="http://cdn.bootcss.com/codemirror/5.18.2/codemirror.min.js"></script>
-@endpush @section('content')
+@extends('layouts.default') @section('title') {{ isset($topic) ? '编辑话题' : lang('Create New Topic') }}_@parent @stop 
+
+@push('addon')
+
+@endpush 
+
+@section('content')
 <div class="topic_create uk-grid pk-grid-large pk-width-sidebar-large uk-form-stacked" data-uk-grid-match="" data-uk-grid-margin="" id="topic-create">
     <div class="uk-width-1-1">
         <div class="uk-margin uk-flex uk-flex-space-between uk-flex-wrap" data-uk-margin="">

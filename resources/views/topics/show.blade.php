@@ -105,23 +105,32 @@
                     </div>
                 </form>
             </div>
-            <div class="box preview markdown-reply uk-panel uk-panel-box uk-margin-top" id="preview-box" style="display:none;"></div>
+            <div class=" box preview markdown-reply uk-panel uk-panel-box uk-margin-top" id="preview-box" style="display:none;"></div>
         </div>
     </div>
     @if( $topic->user->payment_qrcode ) @include('topics.partials.payment_qrcode_modal') @endif @include('layouts.partials.sidebar')
 </div>
 @include('layouts.partials.bottombanner') @stop 
 @section('scripts')
-<script type="text/javascript">
-    $(document).ready(function()
-    {
-        var $config = {
-            sites               : ['qzone', 'qq', 'weibo','wechat', 'douban'], // 启用的站点
-            disabled            : ['google', 'facebook', 'twitter'], // 禁用的站点
-        };
-        Config.following_users =  @if($currentUser) {!!$currentUser->present()->followingUsersJson()!!} @else [] @endif;
-        PHPHub.initAutocompleteAtUser();
-        $('.social-share').share($config);
-    });
-</script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            var $config = {
+                sites               : ['qzone', 'qq', 'weibo','wechat', 'douban'], // 启用的站点
+            };
+            Config.following_users =  @if($currentUser) {!!$currentUser->present()->followingUsersJson()!!} @else [] @endif;
+            PHPHub.initAutocompleteAtUser();
+            $('.social-share').share($config);
+        });
+    </script>
+    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/autocomplete.min.js?v=c692"></script>
+    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/notify.min.js?v=c692"></script>
+    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/tooltip.min.js?v=c692"></script>
+    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/sticky.min.js?v=c692"></script>
+    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/sortable.min.js?v=c692"></script>
+    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/pagination.min.js?v=c692"></script>
+    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/form-select.min.js?v=c692"></script>
+    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/htmleditor.min.js"></script>
+    <script src="http://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+    <script src="http://cdn.bootcss.com/codemirror/5.18.2/codemirror.min.js"></script>
 @stop
