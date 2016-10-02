@@ -3092,7 +3092,6 @@
                 "shasum": null
             },
             "require": {
-                "laravel/laravel": ">= 5.1",
                 "php": ">=5.4"
             },
             "require-dev": {
