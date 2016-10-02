@@ -3,7 +3,20 @@
 @section('content')
 
 <div class="uk-panel uk-panel-box">
-  {!! lang('site_intro') !!}
+  <div class="uk-grid uk-grid-medium" style="width: 480px; margin:0px auto; text-align: left;">
+    <div class="uk-width-2-5">
+    </div>
+    <div class="uk-width-3-5">
+      <div class="media-body" style="line-height: 200%; text-align: center;">
+        <div style="font-size: 15px">
+        MakerPlus - 代码已开源至 <a href="https://github.com/pcdotfan/MakerPlus" target="_blank">Github.</a>
+        </div>
+        <div>
+          <code style="padding: 4px 10px;">git@github.com:PCDotFan/makerPlus.git</code>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 @include('layouts.partials.topbanner')
