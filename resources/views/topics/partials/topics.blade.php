@@ -30,10 +30,10 @@
                     </span>
             </div>
         </div>
-        @if ($topic->order > 0 && !Input::get('filter') && Route::currentRouteName() != 'home' )
-        <span class="uk-badge-label uk-badge-warning">{{ lang('Stick') }}</span> @else
-        <span class="uk-badge-label uk-badge-{{ ($topic->is_excellent == 'yes' && Route::currentRouteName() != 'home') ? 'success' : 'default' }}">{{{ $topic->category->name }}}</span> @endif
         <section class="discussion-main">
+            @if ($topic->order > 0 && !Input::get('filter') && Route::currentRouteName() != 'home' )
+            <span class="uk-badge-label uk-badge-warning">{{ lang('Stick') }}</span> @else
+            <span class="uk-badge-label uk-badge-{{ ($topic->is_excellent == 'yes' && Route::currentRouteName() != 'home') ? 'success' : 'default' }}">{{{ $topic->category->name }}}</span> @endif
             <h2 class="uk-article-title discussion-title"><a href="{{ route('topics.show', [$topic->id]) }}" title="{{{ $topic->title }}}">
                     {{{ $topic->title }}}
                 </a></h2>
