@@ -1,5 +1,5 @@
 @extends('layouts.default') @section('title') {{ lang('Photo Upload') }}_@parent @stop @section('content') @push('addon')
-<link href="http://cdn.bootcss.com/uikit/2.27.1/css/components/form-file.css" rel="stylesheet"> @stop
+<link href="https://cdn.bootcss.com/uikit/2.27.1/css/components/form-file.css" rel="stylesheet"> @stop
 <div class="uk-grid pk-grid-large user-show" data-uk-grid-margin="">
     @include('users.partials.setting_nav')
     <div class="pk-width-content">

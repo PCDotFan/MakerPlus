@@ -123,14 +123,14 @@
             $('.social-share').share($config);
         });
     </script>
-    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/autocomplete.min.js?v=c692"></script>
-    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/notify.min.js?v=c692"></script>
-    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/tooltip.min.js?v=c692"></script>
-    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/sticky.min.js?v=c692"></script>
-    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/sortable.min.js?v=c692"></script>
-    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/pagination.min.js?v=c692"></script>
-    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/form-select.min.js?v=c692"></script>
-    <script src="http://cdn.bootcss.com/uikit/2.27.1/js/components/htmleditor.min.js"></script>
-    <script src="http://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
-    <script src="http://cdn.bootcss.com/codemirror/5.18.2/codemirror.min.js"></script>
+    <script src="https://cdn.bootcss.com/uikit/2.27.1/js/components/autocomplete.min.js?v=c692"></script>
+    <script src="https://cdn.bootcss.com/uikit/2.27.1/js/components/notify.min.js?v=c692"></script>
+    <script src="https://cdn.bootcss.com/uikit/2.27.1/js/components/tooltip.min.js?v=c692"></script>
+    <script src="https://cdn.bootcss.com/uikit/2.27.1/js/components/sticky.min.js?v=c692"></script>
+    <script src="https://cdn.bootcss.com/uikit/2.27.1/js/components/sortable.min.js?v=c692"></script>
+    <script src="https://cdn.bootcss.com/uikit/2.27.1/js/components/pagination.min.js?v=c692"></script>
+    <script src="https://cdn.bootcss.com/uikit/2.27.1/js/components/form-select.min.js?v=c692"></script>
+    <script src="https://cdn.bootcss.com/uikit/2.27.1/js/components/htmleditor.min.js"></script>
+    <script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+    <script src="https://cdn.bootcss.com/codemirror/5.18.2/codemirror.min.js"></script>
 @stop

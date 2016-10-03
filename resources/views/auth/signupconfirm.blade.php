@@ -1,6 +1,6 @@
 @extends('layouts.default') @section('title') {{ lang('Create New Account') }}_@parent @stop @section('content') 
 @push('addon')
-    <script src="http://cdn.bootcss.com/vue/2.0.0-rc.5/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.0.0-rc.5/vue.min.js"></script>
 @endpush
 <div class="uk-grid" data-uk-grid-margin="" id="registration">
     <div class="uk-width-medium-2-3 uk-width-large-3-4 uk-row-first">
