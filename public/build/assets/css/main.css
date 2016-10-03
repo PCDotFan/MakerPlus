@@ -6163,19 +6163,6 @@ a.uk-badge:hover {
 .uk-badge-danger {
   background-color: transparent;
 }
-.uk-badge-label {
-  background: #e5e5e5;
-  color: #999;
-  display: inline;
-  padding: .2em .6em .3em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
-}
 .uk-badge-notification {
   padding: 0 7px;
 }
@@ -10634,6 +10621,19 @@ html[dir="rtl"] .uk-slider > * {
 .uk-tooltip-right {
   margin-left: 10px;
 }
+.uk-badge-label {
+  background: transparent;
+  color: #489be0;
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
 /* ========================================================================
    Pagekit
  ========================================================================== */
@@ -11451,19 +11451,6 @@ body {
 .uk-form-horizontal .uk-form-controls {
   margin-top: 7px;
 }
-.uk-badge-label {
-  background: #e5e5e5;
-  color: #999;
-  display: inline;
-  padding: .2em .6em .3em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
-}
 /* Brand
  ========================================================================== */
 .tm-brand {
@@ -11848,6 +11835,9 @@ span.timeago {
 .comment-operate i:hover {
   color: #489be0;
 }
+.comment-operate .active {
+  color: #4091D2;
+}
 .replies .panel-heading .total {
   padding: 8px 15px;
 }
@@ -11968,7 +11958,6 @@ img.radius-avatar {
   margin-top: 6px;
 }
 .discussion-list .discussion-main {
-  display: inline-block;
   margin-left: 0;
 }
 .discussion-main {
@@ -12124,7 +12113,7 @@ a.users-label-item img {
   background: #fffce9;
   border-top: 1px solid #f0e0cf;
   border-bottom: 1px solid #f0e0cf;
-  margin: 0px -22px 10px -22px;
+  margin: 0px -25px 10px -25px;
   padding: 4px 30px;
   color: #da974d;
   font-size: 14px;

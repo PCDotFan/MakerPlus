@@ -9,6 +9,7 @@
     <meta name="description" content="@section('description') @show" />
     <meta name="_token" content="{{ csrf_token() }}">
     <!--<link rel="stylesheet" href="{{ elixir('assets/css/main.css') }}">-->
+    <link rel="stylesheet" href="/build/assets/css/styles.css">
     <link rel="stylesheet" href="/build/assets/css/main.css">
     <link href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">

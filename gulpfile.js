@@ -55,7 +55,7 @@ elixir(function(mix) {
 
         .sass([
             'base.scss',
-        ], 'public/assets/css/styles.css')
+        ], 'public/build/assets/css/styles.css')
 
         .scripts(basejs.concat([
             'resources/assets/js/main.js',
