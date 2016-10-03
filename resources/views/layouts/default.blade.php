@@ -14,8 +14,8 @@
     <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/social-share.js/1.0.15/css/share.min.css" rel="stylesheet">
 
-    <link href="http://cdn.bootcss.com/codemirror/5.18.2/codemirror.min.css" rel="stylesheet">
-    <link href="http://cdn.bootcss.com/codemirror/5.18.2/addon/hint/show-hint.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/codemirror/5.18.2/codemirror.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/codemirror/5.18.2/addon/hint/show-hint.css" rel="stylesheet">
 
     <script>
         Config = {
