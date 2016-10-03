@@ -3107,11 +3107,9 @@
                 "shasum": null
             },
             "require": {
-                "laravel/laravel": "5.1.4",
                 "php": ">=5.4"
             },
             "require-dev": {
-                "laravel/laravel": "5.1.4",
                 "phpunit/phpunit": "^3.0"
             },
             "type": "library",
@@ -5833,7 +5831,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "thujohn/rss": 20,
         "phpdocumentor/reflection": 20,
