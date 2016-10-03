@@ -574,7 +574,7 @@ window.Messenger.Events = (function() {
     _Message.prototype.template = function(opts) {
       var $action, $actions, $cancel, $link, $message, $text, action, _i, _len, _ref2,
         _this = this;
-      $message = $("<div class='messenger-message message alert " + opts.type + " message-" + opts.type + " alert-" + opts.type + "'>");
+      $message = $("<div class='messenger-message message uk-alert " + opts.type + " message-" + opts.type + " uk-alert-" + opts.type + "'>");
       if (opts.showCloseButton) {
         $cancel = $('<button type="button" class="messenger-close" data-dismiss="alert">');
         $cancel.html(opts.closeButtonText);
