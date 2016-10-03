@@ -4,7 +4,6 @@
         <ul class="uk-navbar-nav">
             <li class="{{ (Request::is('topics*') && !Request::is('categories*') ? ' uk-active' : '') }}"><a href="{{ route('topics.index') }}">{{ lang('Topics') }}</a></li>
             <li class="{{ Request::is('categories/6') ? ' uk-active' : '' }}"><a href="{{ route('categories.show', [6, 'filter' => 'recent']) }}">教程</a></li>
-            <li class="{{ Request::is('categories/1') ? ' uk-active' : '' }}"><a href="{{ route('categories.show', 1) }}">{{ lang('Jobs') }}</a></li>
             <li class="{{ Request::is('categories/4') ? ' uk-active' : '' }}"><a href="{{ route('categories.show', 4) }}">问答</a></li>
             <li class="{{ (Request::is('sites') ? ' uk-active' : '') }}"><a href="{{ route('sites.index') }}">{{ lang('Sites') }}</a></li>
             <li class="{{ (Request::is('wiki') ? ' uk-active' : '') }}"><a href="{{ route('wiki') }}">Wiki</a></li>

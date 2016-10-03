@@ -1,7 +1,7 @@
  @if (count($topics))
 <ul class="uk-list uk-list-line discussion-list topic-list uk-grid">
     @foreach ($topics as $topic)
-    <li class="uk-width-1-2 uk-article">
+    <li class="uk-width-1-1 uk-width-medium-1-2 uk-article">
         <a class="reply_last_time uk-visible-large meta" href="{{route('topics.show', [$topic->id])}}">
                  {{ $topic->vote_count }} {{ lang('Up Votes') }}
                  <span> ⋅ </span>

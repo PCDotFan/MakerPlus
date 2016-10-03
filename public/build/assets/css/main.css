@@ -10622,8 +10622,8 @@ html[dir="rtl"] .uk-slider > * {
   margin-left: 10px;
 }
 .uk-badge-label {
-  background: transparent;
-  color: #489be0;
+  background: #e5e5e5;
+  color: #999;
   display: inline;
   padding: .2em .6em .3em;
   font-size: 75%;
