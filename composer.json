@@ -42,7 +42,9 @@
         "jpush/jpush": "^3.2",
         "socialiteproviders/manager": "2.1.5",
         "smartisan/follow": "*@dev",
-        "pda/pheanstalk": "^3.1"
+        "pda/pheanstalk": "^3.1",
+        "jellybool/translug": "^1.0",
+        "filp/whoops": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
