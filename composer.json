@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "pcdotfan/makerplus",
+    "description": "An Instructables-like platform based on PHPHub & Pagekit UI.",
     "keywords": [
         "framework",
         "laravel"
