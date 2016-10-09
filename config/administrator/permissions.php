@@ -9,7 +9,7 @@ return [
 
     'permission' => function () {
         // return Auth::user()->hasRole('Developer');
-        return true;
+        return Auth::user()->may('manage_users');
     },
 
     'action_permissions' => [
