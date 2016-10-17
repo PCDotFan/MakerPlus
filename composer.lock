@@ -3100,10 +3100,10 @@
         {
             "name": "smartisan/follow",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/stevejobsii/follow1",
-                "reference": "37de8cfdf10ce361820c405fa12631e4e7656db2",
+            "dist": {
+                "type": "path",
+                "url": "packages/follow",
+                "reference": "43c2cba47e1659882f6ca30dc70c2fc981e4fd04",
                 "shasum": null
             },
             "require": {
