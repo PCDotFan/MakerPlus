@@ -29,36 +29,6 @@ return [
 
     'grant_types' => [
 
-        // accesstoken 过期时间，以返回的时间的准，单位为秒，注意过期时提醒用户重新授权
-        // 类似于：
-        // 1. http://open.weibo.com/wiki/Oauth2/access_token
-        // 2. https://developers.douban.com/wiki/?title=oauth2
-
-        /*
-         * 使用 login_token 获取 access_token
-         */
-        'login_token' => [
-            'class'            => \Phphub\OAuth\LoginTokenGrant::class,
-            'callback'         => \Phphub\OAuth\LoginTokenVerifier::class.'@verify',
-            'access_token_ttl' => (int) env('OAUTH_ACCESS_TOKEN_TTL', 2592000),
-        ],
-
-        /*
-         * 在用户还未登陆的时候使用，可访问部分资源
-         */
-        'client_credentials' => [
-            'class'            => \League\OAuth2\Server\Grant\ClientCredentialsGrant::class,
-            'access_token_ttl' => (int) env('OAUTH_CLIENT_ACCESS_TOKEN_TTL', 2592000),
-        ],
-
-        /*
-         * 使用此授权方法来更新过期的 Token
-         */
-        'refresh_token' => [
-            'class'             => \League\OAuth2\Server\Grant\RefreshTokenGrant::class,
-            'access_token_ttl'  => (int) env('OAUTH_ACCESS_TOKEN_TTL', 2592000),
-            'refresh_token_ttl' => (int) env('OAUTH_REFRESH_TOKEN_TTL', 5184000),
-        ],
     ],
 
     /*
@@ -73,7 +43,8 @@ return [
     |
     */
 
-    'token_type' => League\OAuth2\Server\TokenType\Bearer::class,
+    'token_type' => 'League\OAuth2\Server\TokenType\Bearer',
+
     /*
     |--------------------------------------------------------------------------
     | State Parameter
@@ -84,6 +55,7 @@ return [
     */
 
     'state_param' => false,
+
     /*
     |--------------------------------------------------------------------------
     | Scope Parameter
@@ -94,6 +66,7 @@ return [
     */
 
     'scope_param' => false,
+
     /*
     |--------------------------------------------------------------------------
     | Scope Delimiter
@@ -104,6 +77,7 @@ return [
     */
 
     'scope_delimiter' => ',',
+
     /*
     |--------------------------------------------------------------------------
     | Default Scope
@@ -114,6 +88,7 @@ return [
     */
 
     'default_scope' => null,
+
     /*
     |--------------------------------------------------------------------------
     | Access Token TTL
@@ -125,6 +100,7 @@ return [
     */
 
     'access_token_ttl' => 3600,
+
     /*
     |--------------------------------------------------------------------------
     | Limit clients to specific grants
@@ -136,6 +112,7 @@ return [
     */
 
     'limit_clients_to_grants' => false,
+
     /*
     |--------------------------------------------------------------------------
     | Limit clients to specific scopes
@@ -147,6 +124,7 @@ return [
     */
 
     'limit_clients_to_scopes' => false,
+
     /*
     |--------------------------------------------------------------------------
     | Limit scopes to specific grants
@@ -158,6 +136,7 @@ return [
     */
 
     'limit_scopes_to_grants' => false,
+
     /*
     |--------------------------------------------------------------------------
     | HTTP Header Only
@@ -168,6 +147,6 @@ return [
     |
     */
 
-    'http_headers_only' => true,
+    'http_headers_only' => false,
 
 ];
