@@ -1,10 +1,7 @@
 <?php namespace App\Models\Traits;
 use Carbon\Carbon;
 use Auth;
-<<<<<<< HEAD
-=======
 
->>>>>>> summerblue/master
 trait TopicFilterable
 {
     public function getTopicsWithFilter($filter, $limit = 20)
@@ -32,15 +29,9 @@ trait TopicFilterable
     public function applyFilter($filter)
     {
         $query = $this->withoutBlocked();
-<<<<<<< HEAD
-        // 过滤站务信息
-        $query = $query->withoutBoardTopics();
-=======
-
         // 过滤站务信息
         $query = $query->withoutBoardTopics();
 
->>>>>>> summerblue/master
         switch ($filter) {
             case 'noreply':
                 return $query->pinned()->orderBy('reply_count', 'asc')->recent();
@@ -116,10 +107,6 @@ trait TopicFilterable
     {
         return $query->where('is_blocked', '=', 'no');
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> summerblue/master
     public function scopeWithoutBoardTopics($query)
     {
         if (
@@ -130,10 +117,6 @@ trait TopicFilterable
         }
         return $query;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> summerblue/master
     public function correctApiFilter($filter)
     {
         switch ($filter) {

@@ -1,7 +1,9 @@
 
 (function($){
+
     var original_title = document.title;
     var nCount = 0;
+
     var PHPHub = {
         init: function(){
             var self = this;
@@ -67,9 +69,6 @@
             self.initEditBtnAnimated();
             self.initAnchorific();
         },
-<<<<<<< HEAD
-        //
-=======
 
         initAnchorific: function(){
             $('div.entry-content').anchorific({
@@ -83,7 +82,6 @@
                 spyOffset: 0 // specify heading offset for spy scrolling
             });
         },
->>>>>>> summerblue/master
         /**
          * Open External Links In New Window
          */
@@ -113,8 +111,8 @@
                     $(this).text(moment(time_str).fromNow());
                 }
 
-                $(this).attr('data-uk-tooltip', '');
-                $(this).attr('title', time_str);
+                $(this).addClass('popover-with-html');
+                $(this).attr('data-content', time_str);
             });
         },
 
@@ -160,11 +158,7 @@
         initAutocompleteAtUser: function() {
             var at_users = Config.following_users,
                   user;
-<<<<<<< HEAD
-            $users = $('.comment-meta').find('h3.author');
-=======
             $users = $('.topic .meta a.author, .media-heading a.author');
->>>>>>> summerblue/master
             for (var i = 0; i < $users.length; i++) {
                 user = $users.eq(i).text().trim();
                 if ($.inArray(user, at_users) == -1) {
@@ -216,6 +210,12 @@
          */
         initPopup: function(){
             // Popover with html
+            $('.popover-with-html').popover({
+                 html : true,
+                 trigger : 'hover',
+                 container: 'body',
+                 placement: 'auto top',
+             });
         },
 
         /**
@@ -356,7 +356,7 @@
                 .click(function() {
                     var that = $(this);
                     if ($(this).attr('data-method') == 'post') {
-                    $(this).find("form").submit();
+                        $(this).find("form").submit();
                     }
                     if ($(this).attr('data-method') == 'delete') {
                         swal({
@@ -473,7 +473,7 @@
         },
 
         initToolTips: function() {
-          
+          $('[data-toggle="tooltip"]').tooltip();
         },
 
         initAjax: function() {
@@ -656,7 +656,7 @@
                 if (method === 'delete') {
                     swal({
                         title: "",
-                        text: "您确定要执行此操作吗？",
+                        text: "Are you sure want to proceed?",
                         type: "warning",
                         showCancelButton: true,
                         cancelButtonText: "取消",
@@ -808,7 +808,7 @@
         },
 
         showPluginDownload: function() {
-            this.showMsg('操作成功。', {
+            this.showMsg('操作成功，安装 <a target="_blank" href="https://chrome.google.com/webstore/detail/fcopfkdgikhodlcjkjdppdfkbhmehdon">Chrome 插件</a> 接收提醒。', {
                 type: 'success',
                 timer: 8000
             });
@@ -837,6 +837,8 @@
             $('.topic-author-box .panel-body').hover(function() {
                   $('.edit-btn').toggleClass('infinite');
             });
+
+            $(".bootstrap-switch").bootstrapSwitch();
         },
 
     };

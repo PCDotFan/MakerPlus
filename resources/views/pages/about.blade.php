@@ -12,11 +12,7 @@
         <div class="markdown-body" id="emojify">
 
 
-<<<<<<< HEAD
 <h1 id="toc_0">关于 MakerPlus</h1>
-=======
-<h1 id="toc_0">关于 Laravel China</h1>
->>>>>>> summerblue/master
 
 <h2 id="toc_1">说明</h2>
 

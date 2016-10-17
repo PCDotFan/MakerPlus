@@ -1,4 +1,3 @@
-
 <?php
 namespace App\Http\ApiControllers;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;

@@ -42,9 +42,6 @@ class UserPresenter extends Presenter
         $user_ids = array_pluck($relations, 'user_id');
         return in_array($this->id, $user_ids);
     }
-<<<<<<< HEAD
-=======
-
     public function badgeID()
     {
         $role = $this->getBadge();
@@ -54,7 +51,6 @@ class UserPresenter extends Presenter
         return $role->id;
     }
 
->>>>>>> summerblue/master
     public function badgeName()
     {
         $role = $this->getBadge();
@@ -81,12 +77,8 @@ class UserPresenter extends Presenter
         $role = array_first($roles, function ($key, $value) use (&$relation) {
             return $value->id == $relation->role_id;
         });
-<<<<<<< HEAD
-        return $role->display_name;
-=======
 
         return $role;
->>>>>>> summerblue/master
     }
     public function isAdmin()
     {
