@@ -466,7 +466,7 @@
         },
 
         initToolTips: function() {
-          $('[data-toggle="tooltip"]').tooltip();
+          
         },
 
         initAjax: function() {
@@ -801,7 +801,7 @@
         },
 
         showPluginDownload: function() {
-            this.showMsg('操作成功，安装 <a target="_blank" href="https://chrome.google.com/webstore/detail/fcopfkdgikhodlcjkjdppdfkbhmehdon">Chrome 插件</a> 接收提醒。', {
+            this.showMsg('操作成功。', {
                 type: 'success',
                 timer: 8000
             });
@@ -830,8 +830,6 @@
             $('.topic-author-box .panel-body').hover(function() {
                   $('.edit-btn').toggleClass('infinite');
             });
-
-            $(".bootstrap-switch").bootstrapSwitch();
         },
 
     };
