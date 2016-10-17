@@ -5,10 +5,18 @@ return [
     'heading' => '用户',
     'single'  => '用户',
     'model'   => User::class,
+<<<<<<< HEAD
+=======
+
+>>>>>>> summerblue/master
     'permission'=> function()
     {
         return Auth::user()->may('manage_users');
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> summerblue/master
     'columns' => [
         'id' => [
             'title' => 'ID',

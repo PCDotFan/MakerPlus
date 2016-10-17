@@ -67,6 +67,10 @@ class UsersController extends Controller
     {
         $user = User::findOrFail($id);
         $topics = Topic::whose($user->id)->withoutBoardTopics()->recent()->paginate(15);
+<<<<<<< HEAD
+=======
+
+>>>>>>> summerblue/master
         return view('users.topics', compact('user', 'topics'));
     }
     public function votes($id)

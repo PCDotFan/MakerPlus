@@ -1,7 +1,11 @@
 @extends('layouts.default')
 
 @section('title')
+<<<<<<< HEAD
 MakerPlus 名人堂 @parent
+=======
+Laravel China 名人堂 @parent
+>>>>>>> summerblue/master
 @stop
 
 @section('content')
@@ -9,7 +13,11 @@ MakerPlus 名人堂 @parent
 <div class="hall_of_fames">
 
     <div class="box text-center site-intro rm-link-color">
+<<<<<<< HEAD
         MakerPlus 名人堂，用于推荐对 MakerPlus 社区有突出贡献的用户。<a style="text-decoration: underline;" href="https://laravel-china.org/topics/2440">更多信息</a>
+=======
+        Laravel China 名人堂，用于推荐对 Laravel China 社区有突出贡献的用户。<a style="text-decoration: underline;" href="https://laravel-china.org/topics/2440">更多信息</a>
+>>>>>>> summerblue/master
     </div>
 
     @foreach($users as $index => $user)

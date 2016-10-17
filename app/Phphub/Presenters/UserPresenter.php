@@ -42,7 +42,29 @@ class UserPresenter extends Presenter
         $user_ids = array_pluck($relations, 'user_id');
         return in_array($this->id, $user_ids);
     }
+<<<<<<< HEAD
+=======
+
+    public function badgeID()
+    {
+        $role = $this->getBadge();
+        if (!$role) {
+            return;
+        }
+        return $role->id;
+    }
+
+>>>>>>> summerblue/master
     public function badgeName()
+    {
+        $role = $this->getBadge();
+        if (!$role) {
+            return;
+        }
+        return $role->display_name;
+    }
+
+    public function getBadge()
     {
         $relations = Role::relationArrayWithCache();
         // 用户所在的用户组，显示 role_id 最小的名称
@@ -53,13 +75,18 @@ class UserPresenter extends Presenter
             return $value->user_id == $this->id;
         });
         if (!$relation) {
-            return;
+            return false;
         }
         $roles = Role::rolesArrayWithCache();
         $role = array_first($roles, function ($key, $value) use (&$relation) {
             return $value->id == $relation->role_id;
         });
+<<<<<<< HEAD
         return $role->display_name;
+=======
+
+        return $role;
+>>>>>>> summerblue/master
     }
     public function isAdmin()
     {
@@ -72,6 +99,7 @@ class UserPresenter extends Presenter
     public function followingUsersJson()
     {
         $users = \Auth::user()->followings()->lists('name');
+
         return json_encode($users);
     }
     public function lastActivedAt()

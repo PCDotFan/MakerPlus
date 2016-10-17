@@ -8,7 +8,10 @@ return [
     'model'   => Permission::class,
 
     'permission' => function () {
+<<<<<<< HEAD
         // return Auth::user()->hasRole('Developer');
+=======
+>>>>>>> summerblue/master
         return Auth::user()->may('manage_users');
     },
 

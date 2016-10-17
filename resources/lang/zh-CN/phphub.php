@@ -41,7 +41,7 @@ return [
     'Your topic have new reply:' => '回复了你的主题:',
     'Attented topic has new reply:' => '回复了你关注的主题:',
     'Mention you At:' => '在主题中提及你:',
-    'Data has been deleted.' => '信息已被删除.',
+    'Data has been deleted.' => '信息被删除或无权限查看',
     'You dont have any notice yet!' => '还未收到提醒!',
     'About Us' => '关于我们',
     'Excellent Topics' => '社区精华帖',
@@ -121,9 +121,13 @@ return [
     'Recent Topics' => '最近话题',
     'Reply' => '回复',
     'User Login Required for commenting.' => '需要登录后才能发表评论.',
-    'site_intro' => 'Laravel China 中国最大的 Laravel 和 PHP 开发者社区',
+    'site_intro' => 'Laravel China 中国最大的 Laravel 和 PHP 开发者社区，Powered By <a class="popover-with-html" data-content="查看源代码" target="_blank" style="padding-right:8px" href="https://github.com/summerblue/phphub5" data-original-title="" title=""><i class="fa fa-github-alt text-md" aria-hidden="true"></i> PHPHub</a>',
     'contributing' => '功能正在完善中, 欢迎 <i class="fa fa-github" style="font-size:15px"></i> <a href="https://github.com/summerblue/phphub5" target="_blank">贡献代码</a> 或 <a href="https://github.com/summerblue/phphub5/issues" target="_blank">提交 Issue</a>.',
+<<<<<<< HEAD
     'be_nice' => '我们希望 MakerPlus 能够成为最好的科创交流社区，而实现这个目标，需要我们所有人的共同努力：积极、友善、尊重知识和事实。',
+=======
+    'be_nice' => '我们希望 Laravel China 能够成为拥有浓厚技术氛围的开发者社区，而实现这个目标，需要我们所有人的共同努力：友善，公平，尊重知识和事实。请严格遵守 - <a href="https://laravel-china.org/topics/3022">社区发帖和管理规范</a>',
+>>>>>>> summerblue/master
     'publish_typography' => '请注意单词拼写，以及中英文排版，<a href="https://github.com/sparanoid/chinese-copywriting-guidelines">参考此页</a>',
     'publish_markdown' => '支持 Markdown 格式, <strong>**粗体**</strong>、~~删除线~~、<code>`单行代码`</code>, 更多语法请见这里 <a href="https://github.com/riku/Markdown-Syntax-CN/blob/master/syntax.md">Markdown 语法</a>',
     'publish_at_user' => '@name 会链接到用户页面，并会通知他',

@@ -10,7 +10,10 @@ return [
 
     'permission'=> function()
     {
+<<<<<<< HEAD
         // return Auth::user()->hasRole('developer');
+=======
+>>>>>>> summerblue/master
         return Auth::user()->may('manage_users');
     },
 
@@ -40,6 +43,10 @@ return [
         ],
         'name' => [
             'title' => '标识',
+        ],
+        'description' => [
+            'type' => 'textarea',
+            'title' => '描述',
         ],
         'perms' => array(
             'type' => 'relationship',

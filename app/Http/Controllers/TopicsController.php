@@ -49,8 +49,15 @@ class TopicsController extends Controller implements CreatorListener
             Flash::error('你访问的文章已被屏蔽，有疑问请发邮件：all@estgroupe.com');
             return redirect(route('topics.index'));
         }
+<<<<<<< HEAD
         if (
             config('app.admin_board_cid')
+=======
+
+        if (
+            config('app.admin_board_cid')
+            && $topic->id == config('app.admin_board_cid')
+>>>>>>> summerblue/master
             && (!Auth::check() || !Auth::user()->can('access_board'))
         ) {
             Flash::error('您没有权限访问该文章，有疑问请发邮件：all@estgroupe.com');
@@ -61,12 +68,16 @@ class TopicsController extends Controller implements CreatorListener
         $categoryTopics = $topic->getSameCategoryTopics();
         $userTopics = $topic->byWhom($topic->user_id)->with('user')->withoutBoardTopics()->recent()->limit(8)->get();
         $votedUsers = $topic->votes()->orderBy('id', 'desc')->with('user')->get()->pluck('user');
+<<<<<<< HEAD
+=======
+        $revisionHistory = $topic->revisionHistory()->orderBy('created_at', 'DESC')->first();
+>>>>>>> summerblue/master
         $topic->increment('view_count', 1);
         $banners  = Banner::allByPosition();
         return view('topics.show', compact(
                             'topic', 'replies', 'categoryTopics',
                             'category', 'banners', 'randomExcellentTopics',
-                            'votedUsers', 'userTopics'));
+                            'votedUsers', 'userTopics', 'revisionHistory'));
     }
     public function edit($id)
     {

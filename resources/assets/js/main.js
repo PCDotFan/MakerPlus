@@ -65,8 +65,25 @@
             self.initAjax();
             self.initLogin();
             self.initEditBtnAnimated();
+            self.initAnchorific();
         },
+<<<<<<< HEAD
         //
+=======
+
+        initAnchorific: function(){
+            $('div.entry-content').anchorific({
+                navigation: '.anchorific', // position of navigation
+                speed: 200, // speed of sliding back to top
+                anchorClass: 'anchorific', // class of anchor links
+                anchorText: '#', // prepended or appended to anchor headings
+                top: '.top', // back to top button or link class
+                spy: true, // scroll spy
+                position: 'append', // position of anchor text
+                spyOffset: 0 // specify heading offset for spy scrolling
+            });
+        },
+>>>>>>> summerblue/master
         /**
          * Open External Links In New Window
          */
@@ -143,7 +160,11 @@
         initAutocompleteAtUser: function() {
             var at_users = Config.following_users,
                   user;
+<<<<<<< HEAD
             $users = $('.comment-meta').find('h3.author');
+=======
+            $users = $('.topic .meta a.author, .media-heading a.author');
+>>>>>>> summerblue/master
             for (var i = 0; i < $users.length; i++) {
                 user = $users.eq(i).text().trim();
                 if ($.inArray(user, at_users) == -1) {
@@ -153,10 +174,14 @@
 
             $('textarea').textcomplete([{
                 mentions: at_users,
-                match: /\B@(\w*)$/,
+                match: /\B@(\S+)$/,
                 search: function(term, callback) {
                     callback($.map(this.mentions, function(mention) {
-                        return mention.indexOf(term) === 0 ? mention : null;
+                        console.log(term + ' -> '+ mention.indexOf(term) + ' -> ' + mention);
+                        return (mention.indexOf(term) >= 0 // 中文
+                                || mention.indexOf(term.toUpperCase()) >= 0 // 大写
+                                || mention.indexOf(term.toLowerCase()) >= 0 // 小写
+                                ) ? mention : null;
                     }));
                 },
                 index: 1,
@@ -164,7 +189,10 @@
                     return '@' + mention + ' ';
                 }
             }], {
-                appendTo: 'body'
+                appendTo: 'body',
+                onKeydown: function(e, commands){
+                    console.log(commands);
+                }
             });
 
         },
