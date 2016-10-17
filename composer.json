@@ -95,8 +95,8 @@
             "url": "packages/rss"
         },
         {
-            "type": "git",
-            "url": "https://github.com/stevejobsii/follow1.git"
+            "type": "path",
+            "url": "packages/follow"
         }
     ]
 }
