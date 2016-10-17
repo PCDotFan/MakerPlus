@@ -21,7 +21,7 @@ return array(
      *
      * @type string
      */
-    'title' => 'EST 官网管理',
+    'title' => 'PHPHub 管理后台',
 
     /*
      * The path to your model config directory
@@ -58,7 +58,26 @@ return array(
      * 		'Analytics' => array('E-Commerce' => 'page.ecommerce.analytics'),
      *	)
      */
-    'menu' => array(),
+    'menu' => [
+        '用户管理' => [
+            'users',
+            'roles',
+            'permissions',
+        ],
+        '内容管理' => [
+            'topics',
+            'replies',
+            'categories',
+            'tags'
+        ],
+        '站点管理' => [
+            'banners',
+            'links',
+            'sites',
+            'site_statuses',
+            'revisions',
+        ],
+    ],
 
     /*
      * The permission option is the highest-level authentication check that lets you define a closure that should return true if the current user
@@ -67,7 +86,20 @@ return array(
      * @type closure
      */
     'permission' => function () {
-        return Auth::check();
+        if (App::environment('local')) {
+            if (!Auth::check()) {
+                $user = App\Models\User::first();
+                $user && Auth::login($user);
+            } else {
+                return true;
+            }
+        }
+
+        if (!Auth::check() || !Auth::user()->can('visit_admin')) {
+            return false;
+        }
+
+        return true;
     },
 
     /*
@@ -90,7 +122,7 @@ return array(
      *
      * @type string
      */
-    'home_page' => '',
+    'home_page' => 'site_statuses',
 
     /*
      * The route to which the user will be taken when they click the "back to site" button
@@ -104,7 +136,7 @@ return array(
      *
      * @type string
      */
-    'login_path' => 'auth/login',
+    'login_path' => '/login',
 
     /*
      * The logout path is the path where Administrator will send the user when they click the logout link
