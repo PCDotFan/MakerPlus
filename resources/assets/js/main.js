@@ -111,8 +111,8 @@
                     $(this).text(moment(time_str).fromNow());
                 }
 
-                $(this).addClass('popover-with-html');
-                $(this).attr('data-content', time_str);
+                $(this).attr('data-uk-tooltip');
+                $(this).attr('title', time_str);
             });
         },
 
@@ -209,13 +209,6 @@
          * Scroll to top in one click.
          */
         initPopup: function(){
-            // Popover with html
-            $('.popover-with-html').popover({
-                 html : true,
-                 trigger : 'hover',
-                 container: 'body',
-                 placement: 'auto top',
-             });
         },
 
         /**
