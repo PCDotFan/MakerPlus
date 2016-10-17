@@ -188,6 +188,7 @@ return [
         LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
         App\Providers\OAuthServiceProvider::class,
         App\Providers\ApiExceptionHandlerProvider::class,
+        Douyasi\WangEditor\EditorServiceProvider::class
     ],
 
     /*

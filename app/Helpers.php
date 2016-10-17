@@ -45,7 +45,7 @@ function admin_enum_style_output($value, $reverse = false)
 }
 function navViewActive($anchor)
 {
-    return Route::currentRouteName() == $anchor ? 'active' : '';
+    return Route::currentRouteName() == $anchor ? 'uk-active' : '';
 }
 function model_link($title, $model, $id)
 {

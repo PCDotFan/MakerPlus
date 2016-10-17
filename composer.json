@@ -44,7 +44,8 @@
         "smartisan/follow": "*@dev",
         "pda/pheanstalk": "^3.1",
         "jellybool/translug": "^1.0",
-        "filp/whoops": "^2.1"
+        "filp/whoops": "^2.1",
+        "douyasi/laravel-wang-editor": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -98,5 +99,6 @@
             "type": "path",
             "url": "packages/follow"
         }
-    ]
+    ],
+    "minimum-stability": "dev"
 }
