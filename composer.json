@@ -45,7 +45,7 @@
         "pda/pheanstalk": "^3.1",
         "jellybool/translug": "^1.0",
         "filp/whoops": "^2.1",
-        "douyasi/laravel-wang-editor": "dev-master"
+        "yuanchao/laravel-5-markdown-editor": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

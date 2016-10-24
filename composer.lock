@@ -3101,9 +3101,9 @@
             "name": "smartisan/follow",
             "version": "dev-master",
             "dist": {
-                "type": "path",
-                "url": "packages/follow",
-                "reference": "43c2cba47e1659882f6ca30dc70c2fc981e4fd04",
+                "type": "git",
+                "url": "https://github.com/blueskylsl/follow",
+                "reference": "ea6e27d294262e5817fa8d23aa5724a92a96921f",
                 "shasum": null
             },
             "require": {
