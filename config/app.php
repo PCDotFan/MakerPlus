@@ -188,6 +188,7 @@ return [
         LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
         App\Providers\OAuthServiceProvider::class,
         App\Providers\ApiExceptionHandlerProvider::class,
+        YuanChao\Editor\EndaEditorServiceProvider::class
         //Douyasi\WangEditor\EditorServiceProvider::class
     ],
 
@@ -252,6 +253,7 @@ return [
 
         // API
         'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
+        'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class
     ],
 
 ];
