@@ -41,11 +41,16 @@
         "lucadegasperi/oauth2-server-laravel": "~5.0",
         "jpush/jpush": "^3.2",
         "socialiteproviders/manager": "2.1.5",
+<<<<<<< HEAD
         "smartisan/follow": "*@dev",
         "pda/pheanstalk": "^3.1",
         "jellybool/translug": "^1.0",
         "filp/whoops": "^2.1",
         "yuanchao/laravel-5-markdown-editor": "dev-master"
+=======
+        "overtrue/laravel-follow": "dev-master",
+        "pda/pheanstalk": "^3.1"
+>>>>>>> summerblue/master
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -94,10 +99,6 @@
         {
             "type": "path",
             "url": "packages/rss"
-        },
-        {
-            "type": "path",
-            "url": "packages/follow"
         }
     ],
     "minimum-stability": "dev"
