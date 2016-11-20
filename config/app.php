@@ -187,8 +187,7 @@ return [
         LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
         LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
         App\Providers\OAuthServiceProvider::class,
-        App\Providers\ApiExceptionHandlerProvider::class,
-        YuanChao\Editor\EndaEditorServiceProvider::class
+        App\Providers\ApiExceptionHandlerProvider::class
         //Douyasi\WangEditor\EditorServiceProvider::class
     ],
 
@@ -252,8 +251,7 @@ return [
         //'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
         // API
-        'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
-        'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class
+        'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class
     ],
 
 ];

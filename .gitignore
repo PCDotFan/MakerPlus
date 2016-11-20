@@ -71,3 +71,5 @@ resources/views/topics/show.blade.php
 resources/views/topics/show.blade.php
 
 public/build/assets/js/scripts-425acaa590.js
+
+composer.lock
