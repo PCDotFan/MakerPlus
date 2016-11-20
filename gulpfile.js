@@ -3,7 +3,7 @@ require('laravel-elixir-livereload');
 require('laravel-elixir-compress');
 
 var basejs = [
-    'bower_components/jquery/dist/jquery.min.js',
+    'vendor/bower_components/jquery/dist/jquery.min.js',
     'resources/assets/js/vendor/jquery.pjax.js',
     'resources/assets/js/vendor/moment.min.js',
     'resources/assets/js/vendor/zh-cn.min.js',
@@ -21,28 +21,29 @@ var basejs = [
     'resources/assets/js/vendor/snowfall.jquery.min.js',
     'resources/assets/js/vendor/upload-image.js',
     'resources/assets/js/vendor/messenger.js',
+    'resources/assets/js/vendor/anchorific.js',
     // UIKit
-    'bower_components/uikit/js/uikit.min.js',
-    'bower_components/uikit/js/components/notify.min.js',
-    'bower_components/uikit/js/components/tooltip.min.js',
-    'bower_components/uikit/js/components/sticky.min.js',
-    'bower_components/uikit/js/components/sortable.min.js',
-    'bower_components/uikit/js/components/pagination.min.js',
-    'bower_components/uikit/js/components/form-select.min.js',
+    'vendor/bower_components/uikit/js/uikit.min.js',
+    'vendor/bower_components/uikit/js/components/notify.min.js',
+    'vendor/bower_components/uikit/js/components/tooltip.min.js',
+    'vendor/bower_components/uikit/js/components/sticky.min.js',
+    'vendor/bower_components/uikit/js/components/sortable.min.js',
+    'vendor/bower_components/uikit/js/components/pagination.min.js',
+    'vendor/bower_components/uikit/js/components/form-select.min.js',
 ];
 
 elixir(function(mix) {
     mix
         .copy([
-            'bower_components/font-awesome/fonts'
+            'vendor/bower_components/font-awesome/fonts'
         ], 'public/assets/fonts/')
 
         .copy([
-            'bower_components/uikit/less'
+            'vendor/bower_components/uikit/less'
         ], 'resources/assets/less/uikit')
 
         .copy([
-            'bower_components/messenger/build/css'
+            'vendor/bower_components/messenger/build/css'
         ], 'resources/assets/extras/css/messenger')
 
         .copy([
