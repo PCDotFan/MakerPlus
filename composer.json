@@ -43,7 +43,6 @@
         "socialiteproviders/manager": "2.1.5",
         "overtrue/laravel-follow": "dev-master",
         "pda/pheanstalk": "^3.1",
-        "douyasi/laravel-editor-md": "dev-master",
         "filp/whoops": "^2.1",
         "barryvdh/laravel-debugbar": "^2.3"
     },

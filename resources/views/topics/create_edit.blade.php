@@ -1,9 +1,7 @@
 @extends('layouts.default') @section('title') {{ isset($topic) ? '编辑话题' : lang('Create New Topic') }}_@parent @stop 
 
 @push('extension')
-    {!! editor_css() !!}
-    {!! editor_js() !!}
-    {!! editor_config('mdeditor') !!}
+
 @endpush 
 
 @section('content')
