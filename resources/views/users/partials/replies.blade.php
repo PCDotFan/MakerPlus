@@ -1,5 +1,5 @@
 
-<ul class="uk-list">
+<ul class="uk-list user-basicinfo">
   @foreach ($replies as $index => $reply)
    <li>
 

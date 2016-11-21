@@ -23,6 +23,8 @@ return array(
      */
     'title' => 'PHPHub 管理后台',
 
+    'middleware' => array('web'),
+
     /*
      * The path to your model config directory
      *
@@ -86,7 +88,7 @@ return array(
      * @type closure
      */
     'permission' => function () {
-        if (App::environment('local')) {
+        if (App::environment('development')) {
             if (!Auth::check()) {
                 $user = App\Models\User::first();
                 $user && Auth::login($user);

@@ -1,4 +1,4 @@
-<ul class="uk-list">
+<ul class="uk-list user-basicinfo">
 
   @foreach ($topics as $index => $topic)
    <li>
@@ -9,9 +9,7 @@
 
       <span class="meta">
 
-        <a href="{{ route('categories.show', [$topic->category->id]) }}" title="{{{ $topic->category->name }}}">
-          {{{ $topic->category->name }}}
-        </a>
+        <span class="uk-badge-label uk-badge-default" title="{{{ $topic->category->name }}}">{{{ $topic->category->name }}}</span>
         <span> ⋅ </span>
         {{ $topic->vote_count }} {{ lang('Up Votes') }}
         <span> ⋅ </span>

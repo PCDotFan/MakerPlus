@@ -7,13 +7,13 @@
                         <div class="image">
                             @if ($currentUser && $currentUser->id == $user->id)
                             <a href="{{ route('users.edit_avatar', $user->id) }}" class="" data-uk-tooltip title="修改头像">
-                      <img class="media-object radius-avatar img-thumbnail" src="{{ $user->present()->gravatar(200) }}">
+                      <img class="radius-avatar img-thumbnail" src="{{ $user->present()->gravatar(200) }}">
                   </a> @else
-                            <img class="media-object avatar-112 avatar img-thumbnail" src="{{ $user->present()->gravatar(200) }}"> @endif
+                            <img class="radius-avatar avatar img-thumbnail" src="{{ $user->present()->gravatar(200) }}"> @endif
                         </div>
                         @if ($user->present()->hasBadge())
                         <div class="role-label">
-                            <span class="label label-success role">{{{ $user->present()->badgeName() }}}</span>
+                            <span class="uk-badge-label uk-badge-success role">{{{ $user->present()->badgeName() }}}</span>
                         </div>
                         @endif
                     </div>
@@ -101,14 +101,22 @@
             </a>
             @endif @if(Auth::check() && $currentUser->id != $user->id)
             <!--{{$isFollowing= $currentUser && $currentUser->isFollowing($user->id) ? true : false}}-->
-            <a data-method="post" class="btn btn-{{ !$isFollowing ? 'warning' : 'danger' }} btn-block" href="javascript:void(0);" data-url="{{ route('users.doFollow', $user->id) }}" id="user-edit-button">
+            <a data-method="post" class="uk-width-1-1 uk-button uk-button-{{ !$isFollowing ? 'warning' : 'danger' }} btn-block" href="javascript:void(0);" data-url="{{ route('users.doFollow', $user->id) }}" id="user-edit-button">
                 <i class="fa {{!$isFollowing ? 'fa-plus' : 'fa-minus'}}"></i> {{ !$isFollowing ? lang('Follow') : lang('Unfollow') }}
             </a>
             @endif @if ($currentUser && Entrust::can('manage_users') && ($currentUser->id != $user->id))
-            <a data-method="post" class="btn btn-{{ $user->is_banned == 'yes' ? 'warning' : 'danger' }} btn-block" href="javascript:void(0);" data-url="{{ route('users.blocking', $user->id) }}" id="user-edit-button" onclick=" return confirm('{{ lang('Are you sure want to '. ($user->is_banned == 'yes' ? 'unblock' : 'block') . ' this User?') }}')">
+            <a data-method="post" class="uk-width-1-1 uk-button uk-button-{{ $user->is_banned == 'yes' ? 'warning' : 'danger' }} btn-block" href="javascript:void(0);" data-url="{{ route('users.blocking', $user->id) }}" id="user-edit-button" onclick=" return confirm('{{ lang('Are you sure want to '. ($user->is_banned == 'yes' ? 'unblock' : 'block') . ' this User?') }}')">
                 <i class="fa fa-times"></i> {{ $user->is_banned == 'yes' ? lang('Unblock User') : lang('Block User') }}
             </a>
             @endif {{-- @if(Auth::check() && Auth::id() == $user->id) @include('users.partials.login_QR') @endif --}}
         </div>
+    </div>
+    <div class="uk-panel uk-panel-box">
+        <ul class="uk-nav uk-nav-side pk-nav-large">
+            <li class="{{ navViewActive('users.topics') }}"><a href="{{ route('users.topics', $user->id) }}" ><i class="text-md fa fa-list-ul"></i> Ta 发布的话题</a></li>
+            <li class="{{ navViewActive('users.replies') }}"><a href="{{ route('users.replies', $user->id) }}" ><i class="text-md fa fa-comment"></i> Ta 发表的回复</a></li>
+            <li class="{{ navViewActive('users.following') }}"><a href="{{ route('users.following', $user->id) }}" ><i class="text-md fa fa-eye"></i> Ta 关注的用户</a></li>
+            <li class="{{ navViewActive('users.votes') }}"><a href="{{ route('users.votes', $user->id) }}" ><i class="text-md fa fa-thumbs-up"></i> Ta 赞过的话题</a></li>
+        </ul>
     </div>
 </div>

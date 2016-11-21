@@ -47,6 +47,10 @@ function navViewActive($anchor)
 {
     return Route::currentRouteName() == $anchor ? 'uk-active' : '';
 }
+function tabViewActive($anchor)
+{
+    return Request::getQueryString() == $anchor ? 'uk-active' : '';
+}
 function model_link($title, $model, $id)
 {
     return '<a href="'.model_url($model, $id).'" target="_blank">' . $title . '</a>';

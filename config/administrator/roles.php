@@ -10,7 +10,6 @@ return [
 
     'permission'=> function()
     {
-
         return Auth::user()->may('manage_users');
     },
 

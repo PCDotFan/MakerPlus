@@ -1,10 +1,15 @@
-var elixir = require('laravel-elixir');
+var elixir = require('laravel-elixir'),
+    gutil = require('gulp-util');
 require('laravel-elixir-livereload');
 require('laravel-elixir-compress');
+
+elixir.config.production = true;
+elixir.config.sourcemaps = false;
 
 var basejs = [
     'vendor/bower_components/jquery/dist/jquery.min.js',
     'resources/assets/js/vendor/jquery.pjax.js',
+    'vendor/bower_components/vue/dist/vue.min.js',
     'resources/assets/js/vendor/moment.min.js',
     'resources/assets/js/vendor/zh-cn.min.js',
     'resources/assets/js/vendor/emojify.min.js',
@@ -39,6 +44,10 @@ elixir(function(mix) {
         ], 'public/assets/fonts/')
 
         .copy([
+            'vendor/bower_components/font-awesome/css/font-awesome.min.css'
+        ], 'public/assets/css/font-awesome.min.css')
+
+        .copy([
             'vendor/bower_components/uikit/less'
         ], 'resources/assets/less/uikit')
 
@@ -48,18 +57,20 @@ elixir(function(mix) {
 
         .copy([
             'resources/assets/fonts/googlefont'
-        ], 'public/build/assets/fonts/googlefont')
+        ], 'public/assets/fonts/googlefont')
 
         .less([
             'resources/assets/less/pagekit/theme.less'
-        ], 'public/build/assets/css/main.css')
+        ], 'public/assets/css/theme.css')
 
-        .sass([
-            'base.scss',
-        ], 'public/build/assets/css/styles.css')
+        .styles([
+            'public/assets/css/theme.css',
+            'public/assets/css/font-awesome.min.css',
+            ], 'public/assets/css/main.css', './')
 
         .scripts(basejs.concat([
             'resources/assets/js/main.js',
+            'resources/assets/js/editor.js',
         ]), 'public/assets/js/scripts.js', './')
 
         // API Web View
@@ -74,7 +85,4 @@ elixir(function(mix) {
 
         .livereload();
 
-    //if (production) {
-    //    mix.compress();
-    //}
 });

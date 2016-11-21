@@ -187,8 +187,7 @@ return [
         LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
         LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
         App\Providers\OAuthServiceProvider::class,
-        App\Providers\ApiExceptionHandlerProvider::class
-        //Douyasi\WangEditor\EditorServiceProvider::class
+        App\Providers\ApiExceptionHandlerProvider::class,
     ],
 
     /*
@@ -248,10 +247,8 @@ return [
         'Rss'              => Thujohn\Rss\RssFacade::class,
         'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
 
-        //'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-
         // API
-        'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class
+        'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
     ],
 
 ];

@@ -1,7 +1,9 @@
 @extends('layouts.default') @section('title') {{ isset($topic) ? '编辑话题' : lang('Create New Topic') }}_@parent @stop 
 
-@push('addon')
-
+@push('extension')
+    {!! editor_css() !!}
+    {!! editor_js() !!}
+    {!! editor_config('mdeditor') !!}
 @endpush 
 
 @section('content')
@@ -45,13 +47,13 @@
                 </div>
                 @endforeach @include('topics.partials.composing_help_block')
                 <div class="uk-form-row">
-                    <div class="uk-form-controls">
-                        <textarea rows="20" style="overflow:hidden" id="reply_content" placeholder="{{ lang('Please using markdown.') }}" class="uk-width-1-1" data-uk-htmleditor="{mode:'tab', markdown:true}" name="body" cols="50">{{ !isset($topic) ? '' : $topic->body_original }}</textarea>
+                    <div class="uk-form-controls" id="mdeditor">
+                    <textarea rows="20" id="reply_content" placeholder="{{ lang('Please using markdown.') }}" class="uk-width-1-1" name="body" cols="50">{{ !isset($topic) ? '' : $topic->body_original }}</textarea>
                     </div>
                 </div>
                 <div class="uk-form-row status-post-submit" style="display: none">
                     <div class="uk-form-controls">
-                        <input class="btn btn-primary" id="topic-create-submit" type="submit" value="{{ lang('Publish') }}">
+                        <input id="topic-create-submit" type="submit" value="{{ lang('Publish') }}">
                     </div>
                 </div>
             </form>

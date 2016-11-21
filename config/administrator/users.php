@@ -1,10 +1,13 @@
 <?php
+
 use App\Models\User;
+
 return [
     'title'   => '用户',
     'heading' => '用户',
     'single'  => '用户',
     'model'   => User::class,
+
     'permission'=> function()
     {
         return Auth::user()->may('manage_users');

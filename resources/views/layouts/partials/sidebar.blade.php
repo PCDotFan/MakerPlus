@@ -6,6 +6,16 @@
         </div>
         <div class="panel-body uk-text-center topic-author-box">
             @include('topics.partials.topic_author_box')
+            @if(Auth::check() && $currentUser->id != $topic->user->id)
+            <span class="text-white">
+                <?php $isFollowing = $currentUser && $currentUser->isFollowing($topic->user->id) ?>
+                <hr>
+                <a data-method="post" class="uk-button uk-button-{{ !$isFollowing ? 'warning' : 'primary' }} " href="javascript:void(0);" data-url="{{ route('users.doFollow', $topic->user->id) }}" id="user-edit-button">
+                   <i class="fa {{!$isFollowing ? 'fa-plus' : 'fa-minus'}}"></i> {{ !$isFollowing ? lang('Follow') : lang('Unfollow') }}
+                </a>
+            </span>
+        @endif
+
         </div>
     </div>
     @endif @if (isset($userTopics) && count($userTopics))
