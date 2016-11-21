@@ -1,7 +1,7 @@
 @extends('layouts.default') @section('title') {{ isset($topic) ? '编辑话题' : lang('Create New Topic') }}_@parent @stop 
 
 @push('extension')
-
+    <link href="//cdn.bootcss.com/simplemde/1.11.2/simplemde.min.css" rel="stylesheet">
 @endpush 
 
 @section('content')
@@ -46,7 +46,7 @@
                 @endforeach @include('topics.partials.composing_help_block')
                 <div class="uk-form-row">
                     <div class="uk-form-controls" id="mdeditor">
-                    <textarea rows="20" id="reply_content" placeholder="{{ lang('Please using markdown.') }}" class="uk-width-1-1" name="body" cols="50">{{ !isset($topic) ? '' : $topic->body_original }}</textarea>
+                    <textarea rows="20" id="content" spellcheck="false" placeholder="{{ lang('Please using markdown.') }}" class="uk-width-1-1" name="body" cols="50">{{ !isset($topic) ? '' : $topic->body_original }}</textarea>
                     </div>
                 </div>
                 <div class="uk-form-row status-post-submit" style="display: none">
@@ -85,7 +85,8 @@
         </div>
     </div>
 </div>
-@stop @section('scripts')
+@stop 
+@section('scripts')
 <script type="text/javascript">
 $(document).ready(function() {
     $('#category-select').on('change', function() {
@@ -95,4 +96,29 @@ $(document).ready(function() {
     });
 });
 </script>
+    <script src="//cdn.bootcss.com/simplemde/1.11.2/simplemde.min.js"></script>
+    <script>
+        var simplemde = new SimpleMDE({
+            element: document.getElementById("content"),
+            autoDownloadFontAwesome: false,
+            autosave: {
+                enabled: true,
+                uniqueId: "page.create",
+                delay: 1000,
+            },
+            renderingConfig: {
+                codeSyntaxHighlighting: true,
+            },
+            spellChecker: false,
+            toolbar: ["bold", "italic", "heading", "|", "quote", 'code', 'ordered-list', 'unordered-list', 'link', 'image', 'table', '|', 'preview', 'side-by-side', 'fullscreen'],
+        });
+        /*inlineAttachment.editors.codemirror4.attach(simplemde.codemirror, {
+            uploadUrl: $("#upload-img-url").data('upload-img-url'),
+            uploadFieldName: 'image',
+            extraParams: {
+                '_token': XblogConfig.csrfToken,
+                'type': 'xrt'
+            },
+        });*/
+    </script>
 @stop
