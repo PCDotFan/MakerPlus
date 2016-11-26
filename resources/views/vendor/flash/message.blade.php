@@ -6,8 +6,8 @@
             'body'       => session('flash_notification.message')
         ])
     @else
-        <div class="alert
-                    alert-{{ session('flash_notification.level') }}
+        <div class="uk-alert
+                    uk-alert-{{ session('flash_notification.level') }}
                     {{ session()->has('flash_notification.important') ? 'uk-alert-important' : '' }}"
         >
             @if(session()->has('flash_notification.important'))

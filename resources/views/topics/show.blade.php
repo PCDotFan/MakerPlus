@@ -1,15 +1,11 @@
-@extends('layouts.default') 
-@section('title') {{{ $topic->title }}}_@parent @stop 
-@section('description') {{{ $topic->excerpt }}} @stop 
-@section('content')
+@extends('layouts.default') @section('title') {{{ $topic->title }}}_@parent @stop @section('description') {{{ $topic->excerpt }}} @stop @section('content')
 <div class="topics-show uk-grid pk-grid-large" data-uk-grid-margin="">
     <div class="pk-width-content uk-row-first">
         <!-- Topic Detail -->
         <div class="topic article-content uk-panel uk-panel-box">
             <div class="panel-heading">
                 <section class="thought-meta">
-                    <h1 class="uk-article-title topic-title">{{{ $topic->title }}}</h1> 
-                    @include('topics.partials.meta')
+                    <h1 class="uk-article-title topic-title">{{{ $topic->title }}}</h1> @include('topics.partials.meta')
                 </section>
             </div>
             <div class="panel-body content-body entry-content uk-margin">
@@ -33,17 +29,15 @@
         </div>
         <div class="votes-container uk-panel uk-panel-box uk-margin padding-md">
             <div class="panel-body vote-box uk-text-center">
-                <div class="uk-button-group">
-                    <a data-ajax="post" href="javascript:void(0);" data-url="{{ route('topics.upvote', $topic->id) }}" data-uk-tooltip title="点赞相当于收藏，可以在个人页面的「赞过的话题」导航里查看" id="up-vote" class="vote uk-button-primary uk-button {{ $topic->user->payment_qrcode ?: 'btn-inverted' }}  {{ $currentUser && $topic->votes()->ByWhom(Auth::id())->WithType('upvote')->count() ? 'active' :'' }}">
-                        <i class="fa fa-thumbs-up" aria-hidden="true"></i> 点赞
-                    </a>
-                    @if( $topic->user->payment_qrcode )
-                    <div class="or"></div>
-                    <button class="uk-button uk-button-danger" data-uk-modal="{target: '#payment-qrcode-modal'}" data-uk-tooltip title="如果觉得我的文章对您有用，请随意打赏。你的支持将鼓励我继续创作！<br>可以修改个人资料「支付二维码」开启打赏功能。">
-                        <i class="fa fa-heart" aria-hidden="true"></i> 打赏
-                    </button>
-                    @endif
-                </div>
+                <a data-ajax="post" href="javascript:void(0);" data-url="{{ route('topics.upvote', $topic->id) }}" data-uk-tooltip title="点赞相当于收藏，可以在个人页面的「赞过的话题」导航里查看" id="up-vote" class="vote uk-button-primary uk-button {{ $topic->user->payment_qrcode ?: 'btn-inverted' }}  {{ $currentUser && $topic->votes()->ByWhom(Auth::id())->WithType('upvote')->count() ? 'uk-active' :'' }}">
+                    <i class="fa fa-thumbs-up" aria-hidden="true"></i> 点赞
+                </a>
+                @if( $topic->user->payment_qrcode )
+                <div class="or"></div>
+                <button class="uk-button uk-button-danger" data-uk-modal="{target: '#payment-qrcode-modal'}" data-uk-tooltip title="如果觉得我的文章对您有用，请随意打赏。你的支持将鼓励我继续创作！<br>可以修改个人资料「支付二维码」开启打赏功能。">
+                    <i class="fa fa-heart" aria-hidden="true"></i> 打赏
+                </button>
+                @endif
                 <div class="voted-users">
                     @if(count($votedUsers))
                     <div class="user-lists">
@@ -110,16 +104,11 @@
     </div>
     @if( $topic->user->payment_qrcode ) @include('topics.partials.payment_qrcode_modal') @endif @include('layouts.partials.sidebar')
 </div>
-@include('layouts.partials.bottombanner') @stop 
-@section('scripts')
-    <script type="text/javascript">
-        $(document).ready(function()
-        {
-            var $config = {
-                sites               : ['qzone', 'qq', 'weibo','wechat', 'douban'], // 启用的站点
-            };
-            Config.following_users =  @if($currentUser) {!!$currentUser->present()->followingUsersJson()!!} @else [] @endif;
-            PHPHub.initAutocompleteAtUser();
-        });
-    </script>
+@include('layouts.partials.bottombanner') @stop @section('scripts')
+<script type="text/javascript">
+$(document).ready(function() {
+    Config.following_users =  @if($currentUser) {!!$currentUser->present()->followingUsersJson()!!} @else [] @endif;
+    PHPHub.initAutocompleteAtUser();
+});
+</script>
 @stop

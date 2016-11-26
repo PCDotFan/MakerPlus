@@ -8,7 +8,7 @@ use Config;
 
 class TopicPresenter extends Presenter
 {
-    public function topicFilter($filter)
+    public function topicFilter($filter, $addClass = false)
     {
        $category_id = Request::segment(2);
        $category_append = '';
@@ -22,10 +22,12 @@ class TopicPresenter extends Presenter
            }
            $link = URL::to('topics') . '?filter=' . $filter . $query_append . $category_append;
        }
-       $selected = Input::get('filter') ?
-                               (Input::get('filter') == $filter ? ' class="active"':'')
-                               : ($filter == 'default' ? ' class="active"':'');
-       return 'href="' . $link . '"' . $selected;
+       if ( $addClass ) {
+          $selected = Input::get('filter') ?
+                                 (Input::get('filter') == $filter ? ' class="uk-active"':'')
+                                 : ($filter == 'default' ? ' class="uk-active"':'');
+          return $selected;
+       } else return 'href="' . $link . '"' ;
 
     }
 

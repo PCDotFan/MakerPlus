@@ -1,5 +1,5 @@
 @if (isset($nodes) && count($nodes))
-<div class="panel panel-default node-panel">
+<div class="uk-panel uk-panel-box panel-default node-panel">
   <div class="panel-heading">
     <h3 class="panel-title text-center">{{ lang('All Nodes') }}</h3>
   </div>

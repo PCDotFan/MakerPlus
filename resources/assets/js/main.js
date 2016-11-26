@@ -7,6 +7,7 @@
     var PHPHub = {
         init: function(){
             var self = this;
+            /*
             $(document).pjax('a:not(a[target="_blank"])', 'body', {
                 timeout: 1600,
                 maxCacheLength: 500
@@ -25,7 +26,7 @@
             });
             // Exclude links with a specific class
             $(document).on("pjax:click", "a.no-pjax", false);
-
+            */
             self.siteBootUp();
             self.initLightBox();
             self.initNotificationsCount();
@@ -36,10 +37,7 @@
                 showPluginDownload();
             }
 
-            Messenger.options = {
-                extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',
-                theme: 'flat'
-            }
+           
         },
 
         /*
@@ -69,7 +67,6 @@
             self.initEditBtnAnimated();
             self.initAnchorific();
         },
-
         initAnchorific: function(){
             $('div.entry-content').anchorific({
                 navigation: '.anchorific', // position of navigation
@@ -82,6 +79,7 @@
                 spyOffset: 0 // specify heading offset for spy scrolling
             });
         },
+
         /**
          * Open External Links In New Window
          */
@@ -615,7 +613,7 @@
                 var that = $(this);
                 var method = that.data('ajax');
                 var url = that.data('url');
-                var active = that.is('.active');
+                var active = that.is('.uk-active');
                 var cancelText = that.data('lang-cancel');
                 var isRecomend = that.is('#topic-recomend-button');
                 var isWiki = that.is('#topic-wiki-button');
@@ -631,7 +629,7 @@
                 var isCommentVote= that.is('.comment-vote');
                 var commenVoteCount= that.find('.vote-count');
                 var emptyBlock = $('#replies-empty-block');
-                var originUpVoteActive = upVote.is('.active');
+                var originUpVoteActive = upVote.is('.uk-active');
 
                 if (Config.user_id === 0) {
                     swal({
@@ -679,7 +677,7 @@
                 that.addClass('ajax-loading');
 
                 if (active) {
-                    that.removeClass('active');
+                    that.removeClass('uk-active');
                     that.removeClass('animated rubberBand');
 
                     if (isRecomend) {
@@ -695,7 +693,7 @@
                         });
                     }
                 } else {
-                    that.addClass('active');
+                    that.addClass('uk-active');
                     that.addClass('animated rubberBand');
 
                     if (cancelText) {
@@ -760,7 +758,7 @@
                     }
                 }).fail(function() {
                     if (!active) {
-                        that.removeClass('active');
+                        that.removeClass('uk-active');
 
                         if (isRecomend) {
                             excellent.hide();
@@ -768,7 +766,7 @@
                             wiki.hide();
                         }
                     } else {
-                        that.addClass('active');
+                        that.addClass('uk-active');
 
                         if (cancelText) {
                             that.find('span').html(cancelText);
@@ -783,9 +781,9 @@
 
                     if (isVote) {
                         if (originUpVoteActive) {
-                            upVote.addClass('active');
+                            upVote.addClass('uk-active');
                         } else {
-                            upVote.removeClass('active');
+                            upVote.removeClass('uk-active');
                         }
                     }
                 })
@@ -797,7 +795,7 @@
 
         showMsg: function(msg, myobj) {
             if (!msg) return;
-            Messenger().post(msg);
+            UIkit.notify(msg);
         },
 
         showPluginDownload: function() {

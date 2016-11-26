@@ -8,13 +8,11 @@ elixir.config.sourcemaps = false;
 
 var basejs = [
     'vendor/bower_components/jquery/dist/jquery.min.js',
-    'resources/assets/js/vendor/jquery.pjax.js',
     'vendor/bower_components/vue/dist/vue.min.js',
     'resources/assets/js/vendor/moment.min.js',
     'resources/assets/js/vendor/zh-cn.min.js',
     'resources/assets/js/vendor/emojify.min.js',
     'resources/assets/js/vendor/jquery.scrollUp.js',
-    'resources/assets/js/vendor/nprogress.js',
     'resources/assets/js/vendor/jquery.autosize.min.js',
     'resources/assets/js/vendor/prism.js',
     'resources/assets/js/vendor/jquery.textcomplete.js',
@@ -25,7 +23,6 @@ var basejs = [
     'resources/assets/js/vendor/jquery.inline-attach.min.js',
     'resources/assets/js/vendor/snowfall.jquery.min.js',
     'resources/assets/js/vendor/upload-image.js',
-    'resources/assets/js/vendor/messenger.js',
     'resources/assets/js/vendor/anchorific.js',
     // UIKit
     'vendor/bower_components/uikit/js/uikit.min.js',
@@ -66,6 +63,7 @@ elixir(function(mix) {
         .styles([
             'public/assets/css/theme.css',
             'public/assets/css/font-awesome.min.css',
+            'vendor/bower_components/uikit/css/components/sticky.min.css',
             ], 'public/assets/css/main.css', './')
 
         .scripts(basejs.concat([

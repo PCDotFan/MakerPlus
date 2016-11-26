@@ -107,17 +107,6 @@
             @include('layouts.partials.sidebar_topics', ['sidebarTopics' => $randomExcellentTopics])
         </div>
     </div>
-    @endif @if (Route::currentRouteName() == 'topics.index')
-    <div class="uk-panel uk-panel-box">
-        <div class="panel-heading uk-text-center">
-            <h3 class="panel-title">{{ lang('App Download') }}</h3>
-        </div>
-        <div class="panel-body uk-text-center" style="padding: 7px;">
-            <a href="https://laravel-china.org/topics/1531" target="_blank" rel="nofollow" title="">
-                <img src="https://dn-phphub.qbox.me/uploads/images/201512/08/1/cziZFHqkm8.png" style="width:240px;">
-            </a>
-        </div>
-    </div>
     @endif
 </div>
 <div class="uk-clearfix"></div>
