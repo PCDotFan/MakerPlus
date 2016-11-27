@@ -8,7 +8,8 @@ trait UserSocialiteHelper
     {
         $functionMap = [
             'github' => 'getByGithubId',
-            'wechat' => 'getByWechatId'
+            'wechat' => 'getByWechatId',
+            'weibo' => 'getByWeiboId'
         ];
         $function = $functionMap[$driver];
         if (!$function) {
@@ -26,5 +27,10 @@ trait UserSocialiteHelper
     public static function getByWechatId($id)
     {
         return User::where('wechat_openid', '=', $id)->first();
+    }
+
+    public static function getByWeiboId($id)
+    {
+        return User::where('weibo_id', '=', $id)->first();
     }
 }

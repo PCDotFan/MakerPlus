@@ -44,6 +44,9 @@ return [
         'wechat_registered_count' => [
             'title'    => 'WeChat 注册数',
         ],
+        'weibo_registered_count' => [
+            'title'    => 'Weibo 注册数',
+        ],
         'topic_count' => [
             'title'    => '话题数量',
         ],

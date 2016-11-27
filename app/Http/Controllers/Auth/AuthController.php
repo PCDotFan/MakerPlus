@@ -132,12 +132,14 @@ class AuthController extends Controller implements UserCreatorListener
             $oauthData['github_name'] = $registerUserData->nickname;
             $oauthData['name'] = $registerUserData->user['name'];
             $oauthData['email'] = $registerUserData->user['email'];
-        } elseif ($driver == 'wechat') {
-            $oauthData['image_url'] = $registerUserData->avatar;
-            $oauthData['wechat_openid'] = $registerUserData->id;
-            $oauthData['name'] = $registerUserData->nickname;
-            $oauthData['email'] = $registerUserData->email;
-            $oauthData['wechat_unionid'] = $registerUserData->user['unionid'];
+        } elseif ($driver == 'weibo') {
+            $oauthData['image_url'] = $registerUserData->getAvatar();
+            $oauthData['weibo_name'] = $registerUserData->getNickname();
+            $oauthData['weibo_id'] = $registerUserData->getId();
+            $oauthData['weibo_link'] = 'http://weibo.com/'.$registerUserData->getId();
+            $oauthData['name'] = $registerUserData->getName();
+            $oauthData['email'] = $registerUserData->getEmail();
+            
         }
 
         $oauthData['driver'] = $driver;

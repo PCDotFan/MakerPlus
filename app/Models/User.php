@@ -47,7 +47,7 @@ class User extends Model implements AuthenticatableContract,
         parent::boot();
 
         static::created(function ($user) {
-            $driver = $user['github_id'] ? 'github' : 'wechat';
+            $driver = $user['github_id'] ? 'github' : 'weibo';
             SiteStatus::newUser($driver);
 
             dispatch(new SendActivateMail($user));

@@ -23,6 +23,7 @@ class StoreUserRequest extends Request
             'github_url'      => 'url',
             'image_url'       => 'url',
             'wechat_unionid'  => 'string',
+            'weibo_id'        => 'string'
         ];
     }
 }

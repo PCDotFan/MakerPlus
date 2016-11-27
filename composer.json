@@ -31,7 +31,6 @@
         "thujohn/rss": "*@dev",
         "spatie/laravel-backup": "^3.8",
         "VentureCraft/revisionable": "^1.27",
-        "socialiteproviders/weixin": "^2.1",
         "guzzlehttp/guzzle": "^6.2",
         "jrean/laravel-user-verification": "^2.2",
         "naux/sendcloud": "^1.1",
@@ -44,7 +43,8 @@
         "overtrue/laravel-follow": "dev-master",
         "pda/pheanstalk": "^3.1",
         "filp/whoops": "^2.1",
-        "barryvdh/laravel-debugbar": "^2.3"
+        "barryvdh/laravel-debugbar": "^2.3",
+        "socialiteproviders/weibo": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

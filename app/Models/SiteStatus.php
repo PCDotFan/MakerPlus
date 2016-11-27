@@ -17,6 +17,9 @@ class SiteStatus extends Model
             case 'wechat':
                 self::collect('new_user_from_wechat');
                 break;
+            case 'weibo':
+                self::collect('new_user_from_weibo');
+                break;
         }
     }
     public static function newTopic()
@@ -65,6 +68,9 @@ class SiteStatus extends Model
                 break;
             case 'new_user_from_wechat':
                 $todayStatus->wechat_registered_count += 1;
+                break;
+            case 'new_user_from_weibo':
+                $todayStatus->weibo_registered_count += 1;
                 break;
         }
 

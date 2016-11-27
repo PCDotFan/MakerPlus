@@ -42,6 +42,7 @@ class CreateUsersTable extends Migration
             $table->string('login_qr')->nullable();
             $table->string('wechat_openid')->nullable()->index();
             $table->string('wechat_unionid')->nullable()->index();
+            $table->string('weibo_id')->nullable()->index();
             $table->string('weibo_name')->nullable();
             $table->string('weibo_link')->nullable();
             $table->boolean('verified')->default(false)->index();

@@ -54,8 +54,8 @@
                         </div>
                     </li>
                     @else
-                    <a href="{{ URL::route('auth.oauth', ['driver' => 'wechat']) }}" class="uk-button uk-button-success">
-                        <i class="fa fa-weixin"></i> {{ lang('Login') }}
+                    <a href="{{ URL::route('auth.oauth', ['driver' => 'weibo']) }}" class="uk-button uk-button-danger">
+                        <i class="fa fa-weibo"></i> {{ lang('Login') }}
                     </a>
                     <a href="{{ URL::route('auth.oauth', ['driver' => 'github']) }}" class="uk-button uk-button-primary">
                         <i class="fa fa-github-alt"></i> {{ lang('Login') }}

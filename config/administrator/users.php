@@ -97,6 +97,9 @@ return [
         'wechat_unionid' => [
             'title' => '微信 unionid',
         ],
+        'weibo_id' => [
+            'title' => '微博 ID',
+        ],
         'register_source' => [
             'title'  => '注册来源',
         ],
