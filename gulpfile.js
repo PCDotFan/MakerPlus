@@ -3,8 +3,8 @@ var elixir = require('laravel-elixir'),
 require('laravel-elixir-livereload');
 require('laravel-elixir-compress');
 
-elixir.config.production = true;
-elixir.config.sourcemaps = false;
+var production = elixir.config.production;
+
 
 var basejs = [
     'vendor/bower_components/jquery/dist/jquery.min.js',
@@ -79,6 +79,15 @@ elixir(function(mix) {
             'api/api.js'
         ], 'public/assets/js/api.js')
 
+        .version([
+            'assets/css/main.css',
+            'assets/js/scripts.js',
+        ])
+
         .livereload();
+
+        if (production) {
+            mix.compress();
+        }
 
 });

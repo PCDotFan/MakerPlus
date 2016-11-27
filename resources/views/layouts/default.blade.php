@@ -8,8 +8,8 @@
     <meta name="author" content="MakerPlus" />
     <meta name="description" content="@section('description') @show" />
     <meta name="_token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <script src="/assets/js/scripts.js"></script>
+    <link rel="stylesheet" href="{{ cdn(elixir('assets/css/main.css')) }}">
+    <script src="{{ cdn(elixir('assets/js/scripts.js')) }}"></script>
     <script>
         Config = {
             'cdnDomain': '{{ get_cdn_domain() }}',
