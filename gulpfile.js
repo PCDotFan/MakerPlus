@@ -38,10 +38,6 @@ var basejs = [
 elixir(function(mix) {
     mix
         .copy([
-            'vendor/bower_components/font-awesome/fonts'
-        ], 'public/assets/fonts/')
-
-        .copy([
             'vendor/bower_components/font-awesome/css/font-awesome.min.css'
         ], 'public/assets/css/font-awesome.min.css')
 
@@ -59,7 +55,6 @@ elixir(function(mix) {
 
         .styles([
             'public/assets/css/theme.css',
-            'public/assets/css/font-awesome.min.css',
             'public/assets/css/prism.css',
             'vendor/bower_components/uikit/css/components/sticky.min.css',
             ], 'public/assets/css/main.css', './')

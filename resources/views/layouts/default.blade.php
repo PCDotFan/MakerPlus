@@ -10,6 +10,8 @@
     <meta name="_token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ cdn(elixir('assets/css/main.css')) }}">
     <script src="{{ cdn(elixir('assets/js/scripts.js')) }}"></script>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome-animation/0.0.9/font-awesome-animation.min.css" rel="stylesheet">
     <script>
         Config = {
             'cdnDomain': '{{ get_cdn_domain() }}',
