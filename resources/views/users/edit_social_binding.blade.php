@@ -37,7 +37,7 @@
                           <i class="fa fa-weibo"></i>
                           {{ lang('Weibo') }}
                         </a> @endif @if($user->register_source != 'github') @if($user->github_id > 0)
-                        <a href="javascript:void(0);" class="btn btn-info login-btn">
+                        <a href="javascript:void(0);" class="uk-button uk-button-success login-btn">
                             @else
                             <a href="{{ URL::route('auth.oauth', ['driver' => 'github']) }}" class="uk-button login-btn">
                             @endif

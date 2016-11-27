@@ -111,6 +111,13 @@ $(document).ready(function() {
             },
             spellChecker: false,
             toolbar: ["bold", "italic", "heading", "|", "quote", 'code', 'ordered-list', 'unordered-list', 'link', 'image', 'table', '|', 'preview', 'side-by-side', 'fullscreen'],
+            previewRender: function(plainText, preview) {
+                setTimeout(function() {
+                    preview.innerHTML = this.parent.markdown(plainText);
+                    Prism.highlightAll();
+                }.bind(this), 1)
+                return "Loading..."
+            },
         });
         inlineAttachment.editors.codemirror4.attach(simplemde.codemirror, {
             onFileUploadResponse: function(xhr) {

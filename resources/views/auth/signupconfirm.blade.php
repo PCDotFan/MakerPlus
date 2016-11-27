@@ -41,7 +41,7 @@
     new Vue({
         el: '#registration',
         data: {
-            useremail: '@{{ useremail }}'
+            useremail: 'useremail'
         }
     });
 </script>

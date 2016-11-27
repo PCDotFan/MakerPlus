@@ -24,6 +24,7 @@ var basejs = [
     'resources/assets/js/vendor/snowfall.jquery.min.js',
     'resources/assets/js/vendor/upload-image.js',
     'resources/assets/js/vendor/anchorific.js',
+    'public/assets/js/prism.js',
     // UIKit
     'vendor/bower_components/uikit/js/uikit.min.js',
     'vendor/bower_components/uikit/js/components/notify.min.js',
@@ -49,10 +50,6 @@ elixir(function(mix) {
         ], 'resources/assets/less/uikit')
 
         .copy([
-            'vendor/bower_components/messenger/build/css'
-        ], 'resources/assets/extras/css/messenger')
-
-        .copy([
             'resources/assets/fonts/googlefont'
         ], 'public/assets/fonts/googlefont')
 
@@ -63,6 +60,7 @@ elixir(function(mix) {
         .styles([
             'public/assets/css/theme.css',
             'public/assets/css/font-awesome.min.css',
+            'public/assets/css/prism.css',
             'vendor/bower_components/uikit/css/components/sticky.min.css',
             ], 'public/assets/css/main.css', './')
 
