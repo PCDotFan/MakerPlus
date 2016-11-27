@@ -136,7 +136,7 @@ class AuthController extends Controller implements UserCreatorListener
             $oauthData['image_url'] = $registerUserData->user['avatar'];
             $oauthData['weibo_name'] = $registerUserData->user['nickname'];
             $oauthData['weibo_id'] = $registerUserData->user['id'];
-            $oauthData['weibo_link'] = 'http://weibo.com/'.$oauthData['weibo_id']
+            $oauthData['weibo_link'] = 'http://weibo.com/'.$oauthData['weibo_id'];
             $oauthData['name'] = $registerUserData->user['name'];
             $oauthData['email'] = $registerUserData->user['email'];
         }
