@@ -133,13 +133,12 @@ class AuthController extends Controller implements UserCreatorListener
             $oauthData['name'] = $registerUserData->user['name'];
             $oauthData['email'] = $registerUserData->user['email'];
         } elseif ($driver == 'weibo') {
-            $oauthData['image_url'] = $registerUserData->getAvatar();
-            $oauthData['weibo_name'] = $registerUserData->getNickname();
-            $oauthData['weibo_id'] = $registerUserData->getId();
-            $oauthData['weibo_link'] = 'http://weibo.com/'.$registerUserData->getId();
-            $oauthData['name'] = $registerUserData->getName();
-            $oauthData['email'] = $registerUserData->getEmail();
-            
+            $oauthData['image_url'] = $registerUserData->user['avatar'];
+            $oauthData['weibo_name'] = $registerUserData->user['nickname'];
+            $oauthData['weibo_id'] = $registerUserData->user['id'];
+            $oauthData['weibo_link'] = 'http://weibo.com/'.$oauthData['weibo_id']
+            $oauthData['name'] = $registerUserData->user['name'];
+            $oauthData['email'] = $registerUserData->user['email'];
         }
 
         $oauthData['driver'] = $driver;

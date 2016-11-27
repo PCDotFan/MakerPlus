@@ -17,8 +17,8 @@
                 <div class="uk-form-row">
                     <label class="uk-form-label">{{ lang('Register Binding') }}</label>
                     <div class="uk-form-controls">
-                        <a class="uk-button uk-button-success login-btn weichat-login-btn {{ $user->register_source == 'wechat' ? '' : 'uk-hidden' }}" role="button">
-                            <i class="fa fa-weixin"></i> {{ lang('WeChat') }}
+                        <a class="uk-button uk-button-danger login-btn weibo-login-btn {{ $user->register_source == 'weibo' ? '' : 'uk-hidden' }}" role="button">
+                            <i class="fa fa-weibo"></i> {{ lang('Weibo') }}
                         </a>
                         <a class="uk-button uk-button-success login-btn {{ $user->register_source == 'github' ? '' : 'uk-hidden' }}" role="button">
                             <i class="fa fa-github-alt"></i> {{ lang('GitHub') }}
@@ -29,13 +29,13 @@
                 <div class="uk-form-row">
                     <label class="uk-form-label">{{ lang('Available Bindings') }}</label>
                     <div class="uk-form-controls">
-                        @if($user->register_source != 'wechat') @if($user->wechat_openid)
-                        <a href="javascript:void(0);" class="btn btn-success login-btn">
+                        @if($user->register_source != 'weibo') @if($user->weibo_id)
+                        <a href="javascript:void(0);" class="uk-button uk-button-danger login-btn">
                         @else
-                        <a href="{{ URL::route('auth.oauth', ['driver' => 'wechat']) }}" class="uk-button login-btn">
+                        <a href="{{ URL::route('auth.oauth', ['driver' => 'weibo']) }}" class="uk-button login-btn">
                         @endif
-                          <i class="fa fa-weixin"></i>
-                          {{ lang('WeChat') }}
+                          <i class="fa fa-weibo"></i>
+                          {{ lang('Weibo') }}
                         </a> @endif @if($user->register_source != 'github') @if($user->github_id > 0)
                         <a href="javascript:void(0);" class="btn btn-info login-btn">
                             @else
@@ -43,7 +43,7 @@
                             @endif
                               <i class="fa fa-github-alt"></i>
                               {{ lang('GitHub') }}
-                            </a> @endif @if($user->github_id > 0 && $user->wechat_openid)
+                            </a> @endif @if($user->github_id > 0 && $user->weibo_id)
                         <p class="uk-form-help-block">{{ lang('Already binded to this account') }}</p> @else
                         <p class="uk-form-help-block">{{ lang('Click to bind to this account') }}</p> @endif
                     </div>

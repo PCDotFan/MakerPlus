@@ -21,8 +21,10 @@
               </div>
 
             @if ( ! $currentUser)
-                <a class="btn btn-lg btn-primary btn-block" id="login-required-submit" href="{{ URL::route('auth.oauth', ['driver' => 'github']) }}"><i class="fa fa-github-alt"></i> {{lang('Login with GitHub')}}</a>
-                <a class="btn btn-lg btn-success btn-block" href="{{ URL::route('auth.oauth', ['driver' => 'wechat']) }}"><i class="fa fa-weixin" ></i> {{lang('Login with WeChat')}}</a>
+                <p class="uk-text-center uk-margin-bottom-remove">
+                <a class="uk-button uk-button-primary" id="login-required-submit" href="{{ URL::route('auth.oauth', ['driver' => 'github']) }}"><i class="fa fa-github-alt"></i> {{lang('Login with GitHub')}}</a>
+                <a class="uk-button uk-button-danger" href="{{ URL::route('auth.oauth', ['driver' => 'weibo']) }}"><i class="fa fa-weibo" ></i> {{lang('Login with Weibo')}}</a>
+                </p>
             @endif
 
 

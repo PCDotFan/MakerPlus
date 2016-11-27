@@ -63,6 +63,10 @@ trait SocialiteHelper
         } elseif ($driver == 'wechat') {
             $currentUser->wechat_openid = $oauthUser->id;
             $currentUser->wechat_unionid = $oauthUser->user['unionid'];
+        } elseif ($driver == 'wechat') {
+            $currentUser->weibo_id = $oauthUser->id;
+            $currentUser->weixin_link = 'http://weibo.com/'.$currentUser->weibo_id;
+            $currentUser->weibo_name = $oauthUser->name;
         }
 
         $currentUser->save();
