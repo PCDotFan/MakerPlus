@@ -32,7 +32,7 @@
 <div class="uk-modal" id="append-modal" tabindex="-1">
     <div class="uk-modal-dialog">
         <div class="modal-content">
-            <button type="button" class="uk-modal-close uk-close"></button>
+            <button type="button" class="uk-modal-close uk-close uk-float-right"></button>
             <div class="uk-modal-header">
                 <h4>{{ lang('Append Content') }}</h4>
             </div>
