@@ -41,7 +41,7 @@
     new Vue({
         el: '#registration',
         data: {
-            useremail: '{{ $oauthData['email'] ?: '' }}'
+            useremail: '@{{ useremail }}'
         }
     });
 </script>
