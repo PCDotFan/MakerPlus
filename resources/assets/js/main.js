@@ -864,10 +864,4 @@ var moveEnd = function(obj){
 
   if (document.selection) {
     var sel = obj.createTextRange();
-    sel.moveStart('character',len);
-    sel.collapse();
-    sel.select();
-  } else if (typeof obj.selectionStart == 'number' && typeof obj.selectionEnd == 'number') {
-    obj.selectionStart = obj.selectionEnd = len;
-  }
-}
+    
