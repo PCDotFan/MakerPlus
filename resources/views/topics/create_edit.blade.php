@@ -46,7 +46,8 @@
                 @endforeach @include('topics.partials.composing_help_block')
                 <div class="uk-form-row">
                     <div class="uk-form-controls" id="mdeditor">
-                    <textarea rows="20" id="content" spellcheck="false" placeholder="{{ lang('Please using markdown.') }}" class="uk-width-1-1" name="body" cols="50">{{ !isset($topic) ? '' : $topic->body_original }}</textarea>
+                    <div id="upload-img-url" data-upload-img-url="{{ route('upload.image') }}" style="display: none"></div>
+                    <textarea rows="20" id="reply_content" spellcheck="false" placeholder="{{ lang('Please using markdown.') }}" class="uk-width-1-1" name="body" cols="50">{{ !isset($topic) ? '' : $topic->body_original }}</textarea>
                     </div>
                 </div>
                 <div class="uk-form-row status-post-submit" style="display: none">
@@ -99,7 +100,7 @@ $(document).ready(function() {
     <script src="//cdn.bootcss.com/simplemde/1.11.2/simplemde.min.js"></script>
     <script>
         var simplemde = new SimpleMDE({
-            element: document.getElementById("content"),
+            element: document.getElementById("reply_content"),
             autoDownloadFontAwesome: false,
             autosave: {
                 enabled: true,
@@ -118,25 +119,16 @@ $(document).ready(function() {
                 }.bind(this), 1)
                 return "Loading..."
             },
+
         });
         inlineAttachment.editors.codemirror4.attach(simplemde.codemirror, {
-            onFileUploadResponse: function(xhr) {
-                var result = JSON.parse(xhr.responseText),
-                filename = result[this.settings.jsonFieldName];
-
-                if (result && filename) {
-                    var newValue;
-                    if (typeof this.settings.urlText === 'function') {
-                        newValue = this.settings.urlText.call(this, filename, result);
-                    } else {
-                        newValue = this.settings.urlText.replace(this.filenameTag, filename);
-                    }
-                    var text = this.editor.getValue().replace(this.lastValue, newValue);
-                    this.editor.setValue(text);
-                    this.settings.onFileUploaded.call(this, filename);
-                }
-                return false;
-            }
+                uploadUrl: Config.routes.upload_image,
+                extraParams: {
+                  '_token': Config.token,
+                },
+                onUploadedFile: function(response) {
+                    setTimeout(self.runPreview, 200);
+                },
         });
     </script>
 @stop

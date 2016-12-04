@@ -58,7 +58,6 @@
             self.initEditorPreview();
             self.initReplyOnPressKey();
             self.initDeleteForm();
-            self.initInlineAttach();
             // self.snowing();
             self.forceImageDataType();
             self.initToolTips();
@@ -421,18 +420,6 @@
         /**
          * Upload image
          */
-        initInlineAttach: function() {
-            var self = this;
-            $('#reply_content').inlineattach({
-                uploadUrl: Config.routes.upload_image,
-                extraParams: {
-                  '_token': Config.token,
-                },
-                onUploadedFile: function(response) {
-                    setTimeout(self.runPreview, 200);
-                },
-            });
-        },
 
         /**
          * Snowing around the world

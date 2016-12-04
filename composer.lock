@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8d4d484ee99f5db131962e971a422dfc",
-    "content-hash": "3fcc812c30cb06060f2d6315f698230e",
+    "hash": "0a4fa3b0ea309ac66bf55cb7358d305a",
+    "content-hash": "003dc40acde2ffc1e52b6c017b63d5a4",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -55,12 +55,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "b97745824d6f96604144e8fdc7095ea7adc08ce7"
+                "reference": "eb90bb8481024fed02ffac31c5905f7ff173914e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/barryvdh/laravel-debugbar/b97745824d6f96604144e8fdc7095ea7adc08ce7.zip",
-                "reference": "b97745824d6f96604144e8fdc7095ea7adc08ce7",
+                "url": "https://packagist.phpcomposer.com/files/barryvdh/laravel-debugbar/eb90bb8481024fed02ffac31c5905f7ff173914e.zip",
+                "reference": "eb90bb8481024fed02ffac31c5905f7ff173914e",
                 "shasum": ""
             },
             "require": {
@@ -101,7 +101,7 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2016-10-26 07:33:01"
+            "time": "2016-11-21 12:49:15"
         },
         {
             "name": "baum/baum",
@@ -1482,12 +1482,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "5f1e028d22c8a79ea29cd00157aa1a743af34d58"
+                "reference": "8dd55df258ca04a0ed729f29b6db6e419f701029"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/laravel/framework/5f1e028d22c8a79ea29cd00157aa1a743af34d58.zip",
-                "reference": "5f1e028d22c8a79ea29cd00157aa1a743af34d58",
+                "url": "https://packagist.phpcomposer.com/files/laravel/framework/8dd55df258ca04a0ed729f29b6db6e419f701029.zip",
+                "reference": "8dd55df258ca04a0ed729f29b6db6e419f701029",
                 "shasum": ""
             },
             "require": {
@@ -1603,7 +1603,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-11-07 16:19:36"
+            "time": "2016-12-03 18:49:20"
         },
         {
             "name": "laravel/socialite",
@@ -1715,12 +1715,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "a7374be92c961f8fa9af7eccdaf35c2e71059330"
+                "reference": "0165294685dc83e521a46e0df2ff6b8bd4df4369"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/thephpleague/flysystem/a7374be92c961f8fa9af7eccdaf35c2e71059330.zip",
-                "reference": "a7374be92c961f8fa9af7eccdaf35c2e71059330",
+                "url": "https://packagist.phpcomposer.com/files/thephpleague/flysystem/0165294685dc83e521a46e0df2ff6b8bd4df4369.zip",
+                "reference": "0165294685dc83e521a46e0df2ff6b8bd4df4369",
                 "shasum": ""
             },
             "require": {
@@ -1790,7 +1790,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-11-16 08:56:22"
+            "time": "2016-11-23 11:39:43"
         },
         {
             "name": "league/fractal",
@@ -1861,12 +1861,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/html-to-markdown.git",
-                "reference": "c5b05d50c646d4e3cdfcc27b6d5ed62dfaeef4c1"
+                "reference": "20d2e21f10847e258a16a914b2f1dd1e82191620"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/thephpleague/html-to-markdown/c5b05d50c646d4e3cdfcc27b6d5ed62dfaeef4c1.zip",
-                "reference": "c5b05d50c646d4e3cdfcc27b6d5ed62dfaeef4c1",
+                "url": "https://packagist.phpcomposer.com/files/thephpleague/html-to-markdown/20d2e21f10847e258a16a914b2f1dd1e82191620.zip",
+                "reference": "20d2e21f10847e258a16a914b2f1dd1e82191620",
                 "shasum": ""
             },
             "require": {
@@ -1917,7 +1917,7 @@
                 "html",
                 "markdown"
             ],
-            "time": "2016-10-27 20:05:57"
+            "time": "2016-11-29 15:14:31"
         },
         {
             "name": "league/oauth1-client",
@@ -2120,12 +2120,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/maximebf/php-debugbar.git",
-                "reference": "b18f24deb9e32da36cf0d82c3e6e7a8785f77359"
+                "reference": "cea4d73dd39eeaccd637c782fb4080013da9de18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/maximebf/php-debugbar/b18f24deb9e32da36cf0d82c3e6e7a8785f77359.zip",
-                "reference": "b18f24deb9e32da36cf0d82c3e6e7a8785f77359",
+                "url": "https://packagist.phpcomposer.com/files/maximebf/php-debugbar/cea4d73dd39eeaccd637c782fb4080013da9de18.zip",
+                "reference": "cea4d73dd39eeaccd637c782fb4080013da9de18",
                 "shasum": ""
             },
             "require": {
@@ -2173,7 +2173,7 @@
                 "debug",
                 "debugbar"
             ],
-            "time": "2016-10-04 09:12:45"
+            "time": "2016-11-28 18:59:25"
         },
         {
             "name": "mews/purifier",
@@ -2246,12 +2246,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "3c782662f9d29c02eb3f200a02dafc8288e28a9e"
+                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/Seldaek/monolog/3c782662f9d29c02eb3f200a02dafc8288e28a9e.zip",
-                "reference": "3c782662f9d29c02eb3f200a02dafc8288e28a9e",
+                "url": "https://packagist.phpcomposer.com/files/Seldaek/monolog/bad29cb8d18ab0315e6c477751418a82c850d558.zip",
+                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558",
                 "shasum": ""
             },
             "require": {
@@ -2316,7 +2316,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-11-17 11:01:44"
+            "time": "2016-11-26 00:15:39"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -2584,12 +2584,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/laravel-follow.git",
-                "reference": "2ad4d232ccccd1cf4a680794d358d243097b870f"
+                "reference": "4fd186b61d3e81b452c1b66ca1be8d93f91ea887"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/overtrue/laravel-follow/2ad4d232ccccd1cf4a680794d358d243097b870f.zip",
-                "reference": "2ad4d232ccccd1cf4a680794d358d243097b870f",
+                "url": "https://packagist.phpcomposer.com/files/overtrue/laravel-follow/4fd186b61d3e81b452c1b66ca1be8d93f91ea887.zip",
+                "reference": "4fd186b61d3e81b452c1b66ca1be8d93f91ea887",
                 "shasum": ""
             },
             "require": {
@@ -2871,12 +2871,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nrk/predis.git",
-                "reference": "944a16d7c0204bb2b28f5f0ca6fa2b2716a7d0b0"
+                "reference": "98ec0cc27efc1efab32b369962f97e29ecc0464a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/nrk/predis/944a16d7c0204bb2b28f5f0ca6fa2b2716a7d0b0.zip",
-                "reference": "944a16d7c0204bb2b28f5f0ca6fa2b2716a7d0b0",
+                "url": "https://packagist.phpcomposer.com/files/nrk/predis/98ec0cc27efc1efab32b369962f97e29ecc0464a.zip",
+                "reference": "98ec0cc27efc1efab32b369962f97e29ecc0464a",
                 "shasum": ""
             },
             "require": {
@@ -2913,7 +2913,7 @@
                 "predis",
                 "redis"
             ],
-            "time": "2016-11-17 16:55:23"
+            "time": "2016-11-22 14:32:30"
         },
         {
             "name": "psr/http-message",
@@ -3086,16 +3086,16 @@
         },
         {
             "name": "rap2hpoutre/laravel-log-viewer",
-            "version": "v0.7.0",
+            "version": "v0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
-                "reference": "3ff06fb16e9cf8bfb581d29bd7da3cd3c0baa5d7"
+                "reference": "03d5cb9e0229e2e01e842c1075257ecaeeb5b3cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/rap2hpoutre/laravel-log-viewer/3ff06fb16e9cf8bfb581d29bd7da3cd3c0baa5d7.zip",
-                "reference": "3ff06fb16e9cf8bfb581d29bd7da3cd3c0baa5d7",
+                "url": "https://packagist.phpcomposer.com/files/rap2hpoutre/laravel-log-viewer/03d5cb9e0229e2e01e842c1075257ecaeeb5b3cd.zip",
+                "reference": "03d5cb9e0229e2e01e842c1075257ecaeeb5b3cd",
                 "shasum": ""
             },
             "require": {
@@ -3123,12 +3123,14 @@
             ],
             "description": "A Laravel log reader",
             "keywords": [
+                "laravel",
                 "log",
                 "log-reader",
                 "log-viewer",
-                "logging"
+                "logging",
+                "lumen"
             ],
-            "time": "2016-06-23 14:07:52"
+            "time": "2016-11-24 19:39:06"
         },
         {
             "name": "roumen/sitemap",
@@ -3307,43 +3309,6 @@
             ],
             "description": "weibo.com OAuth2 Provider for Laravel Socialite",
             "time": "2016-04-01 07:00:54"
-        },
-        {
-            "name": "socialiteproviders/weixin",
-            "version": "v2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SocialiteProviders/Weixin.git",
-                "reference": "8ac480f9c88522bd4d110dedb5deb1982e7d3aae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/SocialiteProviders/Weixin/8ac480f9c88522bd4d110dedb5deb1982e7d3aae.zip",
-                "reference": "8ac480f9c88522bd4d110dedb5deb1982e7d3aae",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6 || ^7.0",
-                "socialiteproviders/manager": "~2.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SocialiteProviders\\Weixin\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "xyxu",
-                    "email": "techxu@gmail.com"
-                }
-            ],
-            "description": "Weixin OAuth2 Provider for Laravel Socialite",
-            "time": "2016-06-14 13:04:39"
         },
         {
             "name": "spatie/db-dumper",
@@ -3611,12 +3576,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "7bf15c78b489f72769c44edfbdb22a024f477324"
+                "reference": "12a6329c24d08fb97bcf10128365757f845dc140"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/swiftmailer/swiftmailer/7bf15c78b489f72769c44edfbdb22a024f477324.zip",
-                "reference": "7bf15c78b489f72769c44edfbdb22a024f477324",
+                "url": "https://packagist.phpcomposer.com/files/swiftmailer/swiftmailer/12a6329c24d08fb97bcf10128365757f845dc140.zip",
+                "reference": "12a6329c24d08fb97bcf10128365757f845dc140",
                 "shasum": ""
             },
             "require": {
@@ -3656,7 +3621,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-11-13 15:37:50"
+            "time": "2016-11-24 01:01:52"
         },
         {
             "name": "symfony/console",
@@ -3664,12 +3629,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "54fb85a818596bc3b33618125fa3ee99b9f45382"
+                "reference": "04e7c41617b717b1900b18eaa2d8dc56c6478526"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/symfony/console/54fb85a818596bc3b33618125fa3ee99b9f45382.zip",
-                "reference": "54fb85a818596bc3b33618125fa3ee99b9f45382",
+                "url": "https://packagist.phpcomposer.com/files/symfony/console/04e7c41617b717b1900b18eaa2d8dc56c6478526.zip",
+                "reference": "04e7c41617b717b1900b18eaa2d8dc56c6478526",
                 "shasum": ""
             },
             "require": {
@@ -3716,7 +3681,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-13 17:41:36"
+            "time": "2016-11-30 18:39:48"
         },
         {
             "name": "symfony/css-selector",
@@ -3834,12 +3799,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "c70b0f453dace15f99cbbe9022e06d5e791c3c94"
+                "reference": "4f1bada977e01153813d2cd21f51312c806ab439"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/symfony/dom-crawler/c70b0f453dace15f99cbbe9022e06d5e791c3c94.zip",
-                "reference": "c70b0f453dace15f99cbbe9022e06d5e791c3c94",
+                "url": "https://packagist.phpcomposer.com/files/symfony/dom-crawler/4f1bada977e01153813d2cd21f51312c806ab439.zip",
+                "reference": "4f1bada977e01153813d2cd21f51312c806ab439",
                 "shasum": ""
             },
             "require": {
@@ -3881,7 +3846,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-12 15:48:22"
+            "time": "2016-11-25 07:43:06"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3998,12 +3963,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "444e5d19d61447f6f829c90a32aae73773f2777f"
+                "reference": "fd196b0dcd0f4359ecf92da34261f15b767c33e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/symfony/http-foundation/444e5d19d61447f6f829c90a32aae73773f2777f.zip",
-                "reference": "444e5d19d61447f6f829c90a32aae73773f2777f",
+                "url": "https://packagist.phpcomposer.com/files/symfony/http-foundation/fd196b0dcd0f4359ecf92da34261f15b767c33e6.zip",
+                "reference": "fd196b0dcd0f4359ecf92da34261f15b767c33e6",
                 "shasum": ""
             },
             "require": {
@@ -4046,7 +4011,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-13 17:41:36"
+            "time": "2016-11-25 22:28:18"
         },
         {
             "name": "symfony/http-kernel",
@@ -4054,12 +4019,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "94c4655c1cbe1bc24d92b4352dd1ef942cfcfc32"
+                "reference": "23136f78025ed59c7c3dcb5c0088cb1aeefe5278"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/symfony/http-kernel/94c4655c1cbe1bc24d92b4352dd1ef942cfcfc32.zip",
-                "reference": "94c4655c1cbe1bc24d92b4352dd1ef942cfcfc32",
+                "url": "https://packagist.phpcomposer.com/files/symfony/http-kernel/23136f78025ed59c7c3dcb5c0088cb1aeefe5278.zip",
+                "reference": "23136f78025ed59c7c3dcb5c0088cb1aeefe5278",
                 "shasum": ""
             },
             "require": {
@@ -4128,7 +4093,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-21 02:19:38"
+            "time": "2016-11-23 13:53:57"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -4303,12 +4268,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "e134ba500a16bead3a059a087b652182f4f85481"
+                "reference": "7ac22a73485e6ae5bf8f072d01daf5563efe9b17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/symfony/process/e134ba500a16bead3a059a087b652182f4f85481.zip",
-                "reference": "e134ba500a16bead3a059a087b652182f4f85481",
+                "url": "https://packagist.phpcomposer.com/files/symfony/process/7ac22a73485e6ae5bf8f072d01daf5563efe9b17.zip",
+                "reference": "7ac22a73485e6ae5bf8f072d01daf5563efe9b17",
                 "shasum": ""
             },
             "require": {
@@ -4344,7 +4309,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-29 02:20:21"
+            "time": "2016-11-21 09:47:03"
         },
         {
             "name": "symfony/routing",
@@ -4352,12 +4317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "c4509a70fdb18d63decd3c24c44734703ed5c7eb"
+                "reference": "aa5c9a9005560937bf6c504124616ad5b823732b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/symfony/routing/c4509a70fdb18d63decd3c24c44734703ed5c7eb.zip",
-                "reference": "c4509a70fdb18d63decd3c24c44734703ed5c7eb",
+                "url": "https://packagist.phpcomposer.com/files/symfony/routing/aa5c9a9005560937bf6c504124616ad5b823732b.zip",
+                "reference": "aa5c9a9005560937bf6c504124616ad5b823732b",
                 "shasum": ""
             },
             "require": {
@@ -4418,7 +4383,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2016-08-16 10:55:04"
+            "time": "2016-11-25 12:07:11"
         },
         {
             "name": "symfony/translation",
@@ -4801,12 +4766,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "70572abb2ee34c79a566dc13d016f89011f8365e"
+                "reference": "71c5ccec1b04649c26b7fa510b1cc6b811cb3fb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/fzaninotto/Faker/70572abb2ee34c79a566dc13d016f89011f8365e.zip",
-                "reference": "70572abb2ee34c79a566dc13d016f89011f8365e",
+                "url": "https://packagist.phpcomposer.com/files/fzaninotto/Faker/71c5ccec1b04649c26b7fa510b1cc6b811cb3fb9.zip",
+                "reference": "71c5ccec1b04649c26b7fa510b1cc6b811cb3fb9",
                 "shasum": ""
             },
             "require": {
@@ -4843,7 +4808,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-11-09 08:42:27"
+            "time": "2016-12-02 14:05:09"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -5048,12 +5013,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "217349ac6328dd33ba64ef9aaec993bbf4337992"
+                "reference": "37ace4a5431821f7833091e7051f00d498404b9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/phpspec/phpspec/217349ac6328dd33ba64ef9aaec993bbf4337992.zip",
-                "reference": "217349ac6328dd33ba64ef9aaec993bbf4337992",
+                "url": "https://packagist.phpcomposer.com/files/phpspec/phpspec/37ace4a5431821f7833091e7051f00d498404b9e.zip",
+                "reference": "37ace4a5431821f7833091e7051f00d498404b9e",
                 "shasum": ""
             },
             "require": {
@@ -5118,7 +5083,7 @@
                 "testing",
                 "tests"
             ],
-            "time": "2016-10-16 17:06:37"
+            "time": "2016-12-02 07:48:16"
         },
         {
             "name": "phpspec/prophecy",
@@ -5126,12 +5091,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "5c324f4951aca87a2de61b7903b75126516b6386"
+                "reference": "6c52c2722f8460122f96f86346600e1077ce22cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/phpspec/prophecy/5c324f4951aca87a2de61b7903b75126516b6386.zip",
-                "reference": "5c324f4951aca87a2de61b7903b75126516b6386",
+                "url": "https://packagist.phpcomposer.com/files/phpspec/prophecy/6c52c2722f8460122f96f86346600e1077ce22cb.zip",
+                "reference": "6c52c2722f8460122f96f86346600e1077ce22cb",
                 "shasum": ""
             },
             "require": {
@@ -5139,11 +5104,11 @@
                 "php": "^5.3|^7.0",
                 "phpdocumentor/reflection-docblock": "^2.0|^3.0.2",
                 "sebastian/comparator": "^1.1",
-                "sebastian/recursion-context": "^1.0"
+                "sebastian/recursion-context": "^1.0|^2.0"
             },
             "require-dev": {
                 "phpspec/phpspec": "^2.0",
-                "phpunit/phpunit": "^4.8 || ^5"
+                "phpunit/phpunit": "^4.8 || ^5.6.5"
             },
             "type": "library",
             "extra": {
@@ -5181,7 +5146,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2016-10-02 13:12:17"
+            "time": "2016-11-21 14:58:47"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -5432,12 +5397,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f19d481b468b76a7fb55eb2b772ed487e484891e"
+                "reference": "c15d6af276559ce51648ad2e77f42a1704b5d02a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/sebastianbergmann/phpunit/f19d481b468b76a7fb55eb2b772ed487e484891e.zip",
-                "reference": "f19d481b468b76a7fb55eb2b772ed487e484891e",
+                "url": "https://packagist.phpcomposer.com/files/sebastianbergmann/phpunit/c15d6af276559ce51648ad2e77f42a1704b5d02a.zip",
+                "reference": "c15d6af276559ce51648ad2e77f42a1704b5d02a",
                 "shasum": ""
             },
             "require": {
@@ -5496,7 +5461,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-11-20 10:35:28"
+            "time": "2016-12-03 14:08:46"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
