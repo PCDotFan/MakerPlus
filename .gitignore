@@ -26,27 +26,8 @@ resources/views/topics/partials/meta.blade.php
 
 gulpfile.js
 
-public/build/assets/css/api-b4075dade3.css
 
 *.map
-
-public/build/assets/css/styles-3cd467265c.css
-
-public/build/assets/css/styles-7bc55ab699.css
-
-public/build/assets/css/api.css.map
-
-public/build/assets/css/styles.css.map
-
-public/build/assets/js/scripts-224249fd5f.js
-
-public/build/assets/js/scripts-b768d993cf.js
-
-public/build/assets/js/scripts.js
-
-public/build/assets/js/scripts.js.map
-
-public/build/rev-manifest.json
 
 resources/views/layouts/default.blade.php
 
@@ -62,14 +43,10 @@ resources/views/users/partials/basicinfo.blade.php
 
 resources/views/topics/partials/replies.blade.php
 
-public/build/assets/css/styles-a6f44dd75d.css
-
-public/build/assets/css/styles.css.map
-
 resources/views/topics/show.blade.php
 
 resources/views/topics/show.blade.php
 
-public/build/assets/js/scripts-425acaa590.js
+public/build
 
 composer.lock
