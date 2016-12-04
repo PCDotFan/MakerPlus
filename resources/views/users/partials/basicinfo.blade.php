@@ -18,7 +18,7 @@
                         @endif
                     </div>
                     <div class="uk-width-1-2">
-                        <h3 class="uk-text-left">
+                        <h3 class="uk-text-left uk-text-truncate">
                             {{ $user->name }}
                         </h3>
                         <div class="item">

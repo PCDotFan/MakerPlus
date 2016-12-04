@@ -39,7 +39,7 @@ elixir(function(mix) {
     mix
         .copy([
             'vendor/bower_components/font-awesome/css/font-awesome.min.css'
-        ], 'public/assets/css/font-awesome.min.css')
+        ], 'public/build/assets/css/font-awesome.min.css')
 
         .copy([
             'vendor/bower_components/uikit/less'
